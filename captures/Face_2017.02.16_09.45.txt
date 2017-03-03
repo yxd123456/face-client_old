@@ -1,0 +1,667 @@
+ACTIVITY MANAGER PENDING INTENTS (dumpsys activity intents)
+  * PendingIntentRecord{4244ed98 com.tencent.mtt broadcastIntent}
+  * PendingIntentRecord{4220cbc8 android startActivity}
+  * PendingIntentRecord{421e26e8 android broadcastIntent}
+  * PendingIntentRecord{42474418 com.tencent.mtt startActivity}
+  * PendingIntentRecord{4230d030 android broadcastIntent}
+  * PendingIntentRecord{4223ae80 android startActivity}
+  * PendingIntentRecord{4221ed40 android broadcastIntent}
+  * PendingIntentRecord{42354520 org.yanzi.playcamera broadcastIntent}
+  * PendingIntentRecord{4241c3e0 com.tencent.mtt startActivity}
+  * PendingIntentRecord{42040880 android broadcastIntent}
+  * PendingIntentRecord{423142a0 com.tencent.mtt broadcastIntent}
+  * PendingIntentRecord{4234b0c8 com.tencent.mtt startActivity}
+  * PendingIntentRecord{42474028 com.tencent.mtt broadcastIntent}
+  * PendingIntentRecord{41fcbac0 com.tencent.mtt broadcastIntent}
+  * PendingIntentRecord{4226e650 com.tencent.mtt broadcastIntent}
+  * PendingIntentRecord{4226fb70 com.android.calendar broadcastIntent}
+  * PendingIntentRecord{4224c210 com.android.providers.calendar broadcastIntent}
+  * PendingIntentRecord{42209a50 android broadcastIntent}
+  * PendingIntentRecord{42158f48 com.tencent.mtt broadcastIntent}
+  * PendingIntentRecord{422293f8 android broadcastIntent}
+  * PendingIntentRecord{42221440 com.android.music broadcastIntent}
+  * PendingIntentRecord{421f6628 com.tencent.mtt startActivity}
+  * PendingIntentRecord{421777d8 android broadcastIntent}
+  * PendingIntentRecord{421e5460 android broadcastIntent}
+  * PendingIntentRecord{421e3498 android broadcastIntent}
+  * PendingIntentRecord{4215d338 android broadcastIntent}
+  * PendingIntentRecord{42252728 android startActivity}
+  * PendingIntentRecord{422098c8 android broadcastIntent}
+  * PendingIntentRecord{422b2ac0 com.tencent.mtt broadcastIntent}
+  * PendingIntentRecord{4222d2e0 com.android.inputmethod.latin broadcastIntent}
+  * PendingIntentRecord{423185f0 com.tencent.mtt startActivity}
+  * PendingIntentRecord{4244eac0 com.tencent.mtt startActivity}
+  * PendingIntentRecord{42271b00 com.android.phone broadcastIntent}
+  * PendingIntentRecord{42188858 com.tencent.mtt broadcastIntent}
+  * PendingIntentRecord{42241258 android broadcastIntent}
+  * PendingIntentRecord{42174d38 android broadcastIntent}
+  * PendingIntentRecord{41fcb7e8 com.tencent.mtt startActivity}
+  * PendingIntentRecord{42314760 com.tencent.mtt startService}
+  * PendingIntentRecord{4217c460 android broadcastIntent}
+  * PendingIntentRecord{4219f148 android broadcastIntent}
+  * PendingIntentRecord{421a29d8 android broadcastIntent}
+  * PendingIntentRecord{4250c860 com.android.deskclock broadcastIntent}
+  * PendingIntentRecord{4229e510 com.tencent.mtt broadcastIntent}
+  * PendingIntentRecord{4224bc00 com.tencent.mtt startActivity}
+  * PendingIntentRecord{42314300 com.tencent.mtt broadcastIntent}
+  * PendingIntentRecord{4229f5f0 com.tencent.mtt startActivity}
+  * PendingIntentRecord{42227560 com.tencent.mtt startService}
+  * PendingIntentRecord{42155a10 android broadcastIntent}
+  * PendingIntentRecord{422410d0 android broadcastIntent}
+  * PendingIntentRecord{422a1c30 com.android.systemui startActivity}
+
+ACTIVITY MANAGER BROADCAST STATE (dumpsys activity broadcasts)
+  Historical broadcasts [foreground]:
+  #0: BroadcastRecord{42460c90 u-1 android.intent.action.CONFIGURATION_CHANGED}
+    act=android.intent.action.CONFIGURATION_CHANGED flg=0x70000010
+  #1: BroadcastRecord{4243b618 u-1 android.intent.action.TIME_TICK}
+    act=android.intent.action.TIME_TICK flg=0x50000014 (has extras)
+    extras: Bundle[{android.intent.extra.ALARM_COUNT=1}]
+  #2: BroadcastRecord{424aa848 u-1 android.intent.action.TIME_TICK}
+    act=android.intent.action.TIME_TICK flg=0x50000014 (has extras)
+    extras: Bundle[{android.intent.extra.ALARM_COUNT=1}]
+  #3: BroadcastRecord{4231fdb8 u-1 android.intent.action.CONFIGURATION_CHANGED}
+    act=android.intent.action.CONFIGURATION_CHANGED flg=0x70000010
+  #4: BroadcastRecord{42326300 u-1 android.intent.action.TIME_TICK}
+    act=android.intent.action.TIME_TICK flg=0x50000014 (has extras)
+    extras: Bundle[{android.intent.extra.ALARM_COUNT=1}]
+  #5: BroadcastRecord{423545c0 u-1 android.intent.action.CONFIGURATION_CHANGED}
+    act=android.intent.action.CONFIGURATION_CHANGED flg=0x70000010
+  #6: BroadcastRecord{423aa1e0 u-1 android.intent.action.TIME_TICK}
+    act=android.intent.action.TIME_TICK flg=0x50000014 (has extras)
+    extras: Bundle[{android.intent.extra.ALARM_COUNT=1}]
+  #7: BroadcastRecord{4246bfc0 u-1 android.intent.action.TIME_TICK}
+    act=android.intent.action.TIME_TICK flg=0x50000014 (has extras)
+    extras: Bundle[{android.intent.extra.ALARM_COUNT=1}]
+  #8: BroadcastRecord{4243b010 u-1 android.intent.action.TIME_TICK}
+    act=android.intent.action.TIME_TICK flg=0x50000014 (has extras)
+    extras: Bundle[{android.intent.extra.ALARM_COUNT=1}]
+  #9: BroadcastRecord{4232ae18 u-1 android.intent.action.TIME_TICK}
+    act=android.intent.action.TIME_TICK flg=0x50000014 (has extras)
+    extras: Bundle[{android.intent.extra.ALARM_COUNT=1}]
+  #10: BroadcastRecord{4233bfc0 u-1 android.intent.action.TIME_TICK}
+    act=android.intent.action.TIME_TICK flg=0x50000014 (has extras)
+    extras: Bundle[{android.intent.extra.ALARM_COUNT=1}]
+  #11: BroadcastRecord{4234fcb8 u-1 android.intent.action.TIME_TICK}
+    act=android.intent.action.TIME_TICK flg=0x50000014 (has extras)
+    extras: Bundle[{android.intent.extra.ALARM_COUNT=1}]
+  #12: BroadcastRecord{4242ef40 u-1 android.intent.action.TIME_TICK}
+    act=android.intent.action.TIME_TICK flg=0x50000014 (has extras)
+    extras: Bundle[{android.intent.extra.ALARM_COUNT=1}]
+  #13: BroadcastRecord{4246df90 u-1 android.intent.action.TIME_TICK}
+    act=android.intent.action.TIME_TICK flg=0x50000014 (has extras)
+    extras: Bundle[{android.intent.extra.ALARM_COUNT=1}]
+  #14: BroadcastRecord{42432b30 u-1 android.intent.action.TIME_TICK}
+    act=android.intent.action.TIME_TICK flg=0x50000014 (has extras)
+    extras: Bundle[{android.intent.extra.ALARM_COUNT=1}]
+  #15: BroadcastRecord{425021b0 u-1 android.intent.action.TIME_TICK}
+    act=android.intent.action.TIME_TICK flg=0x50000014 (has extras)
+    extras: Bundle[{android.intent.extra.ALARM_COUNT=1}]
+  #16: BroadcastRecord{42537250 u-1 android.intent.action.TIME_TICK}
+    act=android.intent.action.TIME_TICK flg=0x50000014 (has extras)
+    extras: Bundle[{android.intent.extra.ALARM_COUNT=1}]
+  #17: BroadcastRecord{424f4258 u-1 android.intent.action.CONFIGURATION_CHANGED}
+    act=android.intent.action.CONFIGURATION_CHANGED flg=0x70000010
+  #18: BroadcastRecord{42538190 u-1 android.intent.action.CONFIGURATION_CHANGED}
+    act=android.intent.action.CONFIGURATION_CHANGED flg=0x70000010
+  #19: BroadcastRecord{424179f0 u-1 android.intent.action.TIME_TICK}
+    act=android.intent.action.TIME_TICK flg=0x50000014 (has extras)
+    extras: Bundle[{android.intent.extra.ALARM_COUNT=1}]
+  #20: BroadcastRecord{424b5500 u-1 android.intent.action.TIME_TICK}
+    act=android.intent.action.TIME_TICK flg=0x50000014 (has extras)
+    extras: Bundle[{android.intent.extra.ALARM_COUNT=1}]
+  #21: BroadcastRecord{42438778 u-1 android.intent.action.TIME_TICK}
+    act=android.intent.action.TIME_TICK flg=0x50000014 (has extras)
+    extras: Bundle[{android.intent.extra.ALARM_COUNT=1}]
+  #22: BroadcastRecord{4241a170 u-1 android.intent.action.TIME_TICK}
+    act=android.intent.action.TIME_TICK flg=0x50000014 (has extras)
+    extras: Bundle[{android.intent.extra.ALARM_COUNT=1}]
+  #23: BroadcastRecord{424b0ed0 u-1 android.intent.action.TIME_TICK}
+    act=android.intent.action.TIME_TICK flg=0x50000014 (has extras)
+    extras: Bundle[{android.intent.extra.ALARM_COUNT=1}]
+  #24: BroadcastRecord{4231ad60 u-1 android.intent.action.TIME_TICK}
+    act=android.intent.action.TIME_TICK flg=0x50000014 (has extras)
+    extras: Bundle[{android.intent.extra.ALARM_COUNT=1}]
+  #25: BroadcastRecord{424afa08 u-1 android.intent.action.TIME_TICK}
+    act=android.intent.action.TIME_TICK flg=0x50000014 (has extras)
+    extras: Bundle[{android.intent.extra.ALARM_COUNT=1}]
+  #26: BroadcastRecord{42531f70 u-1 android.intent.action.TIME_TICK}
+    act=android.intent.action.TIME_TICK flg=0x50000014 (has extras)
+    extras: Bundle[{android.intent.extra.ALARM_COUNT=1}]
+  #27: BroadcastRecord{424b5430 u-1 android.intent.action.TIME_TICK}
+    act=android.intent.action.TIME_TICK flg=0x50000014 (has extras)
+    extras: Bundle[{android.intent.extra.ALARM_COUNT=1}]
+  #28: BroadcastRecord{422edc10 u-1 android.intent.action.TIME_TICK}
+    act=android.intent.action.TIME_TICK flg=0x50000014 (has extras)
+    extras: Bundle[{android.intent.extra.ALARM_COUNT=1}]
+  #29: BroadcastRecord{424283c0 u-1 android.intent.action.TIME_TICK}
+    act=android.intent.action.TIME_TICK flg=0x50000014 (has extras)
+    extras: Bundle[{android.intent.extra.ALARM_COUNT=1}]
+  #30: BroadcastRecord{422ed568 u-1 android.intent.action.TIME_TICK}
+    act=android.intent.action.TIME_TICK flg=0x50000014 (has extras)
+    extras: Bundle[{android.intent.extra.ALARM_COUNT=1}]
+  #31: BroadcastRecord{42474d18 u-1 android.intent.action.TIME_TICK}
+    act=android.intent.action.TIME_TICK flg=0x50000014 (has extras)
+    extras: Bundle[{android.intent.extra.ALARM_COUNT=1}]
+  #32: BroadcastRecord{4233e518 u-1 android.intent.action.TIME_TICK}
+    act=android.intent.action.TIME_TICK flg=0x50000014 (has extras)
+    extras: Bundle[{android.intent.extra.ALARM_COUNT=1}]
+  #33: BroadcastRecord{42428570 u-1 android.intent.action.TIME_TICK}
+    act=android.intent.action.TIME_TICK flg=0x50000014 (has extras)
+    extras: Bundle[{android.intent.extra.ALARM_COUNT=1}]
+  #34: BroadcastRecord{4242ed98 u-1 android.intent.action.TIME_TICK}
+    act=android.intent.action.TIME_TICK flg=0x50000014 (has extras)
+    extras: Bundle[{android.intent.extra.ALARM_COUNT=1}]
+  #35: BroadcastRecord{424593c0 u-1 android.intent.action.TIME_TICK}
+    act=android.intent.action.TIME_TICK flg=0x50000014 (has extras)
+    extras: Bundle[{android.intent.extra.ALARM_COUNT=1}]
+  #36: BroadcastRecord{42460b68 u-1 android.intent.action.TIME_TICK}
+    act=android.intent.action.TIME_TICK flg=0x50000014 (has extras)
+    extras: Bundle[{android.intent.extra.ALARM_COUNT=1}]
+  #37: BroadcastRecord{425289f0 u-1 android.intent.action.TIME_TICK}
+    act=android.intent.action.TIME_TICK flg=0x50000014 (has extras)
+    extras: Bundle[{android.intent.extra.ALARM_COUNT=1}]
+  #38: BroadcastRecord{42532bb0 u-1 android.intent.action.TIME_TICK}
+    act=android.intent.action.TIME_TICK flg=0x50000014 (has extras)
+    extras: Bundle[{android.intent.extra.ALARM_COUNT=1}]
+  #39: BroadcastRecord{42300a10 u-1 android.intent.action.TIME_TICK}
+    act=android.intent.action.TIME_TICK flg=0x50000014 (has extras)
+    extras: Bundle[{android.intent.extra.ALARM_COUNT=1}]
+  #40: BroadcastRecord{42253df8 u-1 android.intent.action.TIME_TICK}
+    act=android.intent.action.TIME_TICK flg=0x50000014 (has extras)
+    extras: Bundle[{android.intent.extra.ALARM_COUNT=1}]
+  #41: BroadcastRecord{422d8f70 u-1 android.intent.action.TIME_TICK}
+    act=android.intent.action.TIME_TICK flg=0x50000014 (has extras)
+    extras: Bundle[{android.intent.extra.ALARM_COUNT=1}]
+  #42: BroadcastRecord{42257310 u-1 android.intent.action.TIME_TICK}
+    act=android.intent.action.TIME_TICK flg=0x50000014 (has extras)
+    extras: Bundle[{android.intent.extra.ALARM_COUNT=1}]
+  #43: BroadcastRecord{422874b0 u-1 android.intent.action.TIME_TICK}
+    act=android.intent.action.TIME_TICK flg=0x50000014 (has extras)
+    extras: Bundle[{android.intent.extra.ALARM_COUNT=1}]
+  #44: BroadcastRecord{422ca5f8 u-1 android.intent.action.TIME_TICK}
+    act=android.intent.action.TIME_TICK flg=0x50000014 (has extras)
+    extras: Bundle[{android.intent.extra.ALARM_COUNT=1}]
+  #45: BroadcastRecord{42205e28 u-1 android.intent.action.TIME_TICK}
+    act=android.intent.action.TIME_TICK flg=0x50000014 (has extras)
+    extras: Bundle[{android.intent.extra.ALARM_COUNT=1}]
+  #46: BroadcastRecord{423b4128 u-1 android.intent.action.TIME_TICK}
+    act=android.intent.action.TIME_TICK flg=0x50000014 (has extras)
+    extras: Bundle[{android.intent.extra.ALARM_COUNT=1}]
+  #47: BroadcastRecord{424b4078 u-1 android.intent.action.TIME_TICK}
+    act=android.intent.action.TIME_TICK flg=0x50000014 (has extras)
+    extras: Bundle[{android.intent.extra.ALARM_COUNT=1}]
+  #48: BroadcastRecord{4233fac0 u-1 android.intent.action.TIME_TICK}
+    act=android.intent.action.TIME_TICK flg=0x50000014 (has extras)
+    extras: Bundle[{android.intent.extra.ALARM_COUNT=1}]
+  #49: BroadcastRecord{42416f28 u-1 android.intent.action.TIME_TICK}
+    act=android.intent.action.TIME_TICK flg=0x50000014 (has extras)
+    extras: Bundle[{android.intent.extra.ALARM_COUNT=1}]
+  ...
+
+  Historical broadcasts [background]:
+  #0: BroadcastRecord{423f7df0 u-1 android.net.wifi.RSSI_CHANGED}
+    act=android.net.wifi.RSSI_CHANGED flg=0x4000010 (has extras)
+    extras: Bundle[{newRssi=-66}]
+  #1: BroadcastRecord{4243a000 u-1 android.net.wifi.RSSI_CHANGED}
+    act=android.net.wifi.RSSI_CHANGED flg=0x4000010 (has extras)
+    extras: Bundle[{newRssi=-67}]
+  #2: BroadcastRecord{4246e418 u0 android.search.action.SEARCHABLES_CHANGED}
+    act=android.search.action.SEARCHABLES_CHANGED flg=0x24000010
+  #3: BroadcastRecord{425218f8 u0 android.search.action.SEARCHABLES_CHANGED}
+    act=android.search.action.SEARCHABLES_CHANGED flg=0x24000010
+  #4: BroadcastRecord{42331d68 u0 android.intent.action.PACKAGE_REPLACED}
+    act=android.intent.action.PACKAGE_REPLACED dat=package:org.yanzi.playcamera flg=0x4000010 (has extras)
+    extras: Bundle[{android.intent.extra.UID=10073, android.intent.extra.REPLACING=true, android.intent.extra.user_handle=0}]
+  #5: BroadcastRecord{423480d8 u0 android.intent.action.PACKAGE_ADDED}
+    act=android.intent.action.PACKAGE_ADDED dat=package:org.yanzi.playcamera flg=0x4000010 (has extras)
+    extras: Bundle[{android.intent.extra.UID=10073, android.intent.extra.REPLACING=true, android.intent.extra.user_handle=0}]
+  #6: BroadcastRecord{42351020 u0 android.intent.action.PACKAGE_REMOVED}
+    act=android.intent.action.PACKAGE_REMOVED dat=package:org.yanzi.playcamera flg=0x4000010 (has extras)
+    extras: Bundle[{android.intent.extra.REMOVED_FOR_ALL_USERS=false, android.intent.extra.UID=10073, android.intent.extra.DATA_REMOVED=false, android.intent.extra.REPLACING=true, android.intent.extra.user_handle=0}]
+  #7: BroadcastRecord{4233af30 u0 android.intent.action.PACKAGE_REPLACED}
+    act=android.intent.action.PACKAGE_REPLACED dat=package:org.yanzi.playcamera flg=0x4000010 (has extras)
+    extras: Bundle[{android.intent.extra.UID=10073, android.intent.extra.REPLACING=true, android.intent.extra.user_handle=0}]
+  #8: BroadcastRecord{4234fd60 u0 android.intent.action.PACKAGE_ADDED}
+    act=android.intent.action.PACKAGE_ADDED dat=package:org.yanzi.playcamera flg=0x4000010 (has extras)
+    extras: Bundle[{android.intent.extra.UID=10073, android.intent.extra.REPLACING=true, android.intent.extra.user_handle=0}]
+  #9: BroadcastRecord{42395f88 u0 android.intent.action.PACKAGE_REMOVED}
+    act=android.intent.action.PACKAGE_REMOVED dat=package:org.yanzi.playcamera flg=0x4000010 (has extras)
+    extras: Bundle[{android.intent.extra.REMOVED_FOR_ALL_USERS=false, android.intent.extra.UID=10073, android.intent.extra.DATA_REMOVED=false, android.intent.extra.REPLACING=true, android.intent.extra.user_handle=0}]
+  #10: BroadcastRecord{423a5648 u-1 android.net.wifi.RSSI_CHANGED}
+    act=android.net.wifi.RSSI_CHANGED flg=0x4000010 (has extras)
+    extras: Bundle[{newRssi=-66}]
+  #11: BroadcastRecord{4242b410 u0 android.intent.action.PACKAGE_RESTARTED}
+    act=android.intent.action.PACKAGE_RESTARTED dat=package:org.yanzi.playcamera flg=0x10 (has extras)
+    extras: Bundle[{android.intent.extra.UID=10073, android.intent.extra.user_handle=0}]
+  #12: BroadcastRecord{4246e9d8 u-1 android.net.wifi.RSSI_CHANGED}
+    act=android.net.wifi.RSSI_CHANGED flg=0x4000010 (has extras)
+    extras: Bundle[{newRssi=-72}]
+  #13: BroadcastRecord{423308c0 u0 com.tencent.QQBrowser.action.residentnotification.weather.timer.restart}
+    act=com.tencent.QQBrowser.action.residentnotification.weather.timer.restart flg=0x10
+  #14: BroadcastRecord{423ad950 u0 com.tencent.QQBrowser.action.hotword.REFRESH}
+    act=com.tencent.QQBrowser.action.hotword.REFRESH flg=0x10 (has extras)
+    extras: Bundle[mParcelledData.dataSize=120]
+  #15: BroadcastRecord{42409780 u0 com.tencent.QQBrowser.action.weather.REFRESH}
+    act=com.tencent.QQBrowser.action.weather.REFRESH flg=0x10
+  #16: BroadcastRecord{4246d910 u0 android.search.action.SEARCHABLES_CHANGED}
+    act=android.search.action.SEARCHABLES_CHANGED flg=0x24000010
+  #17: BroadcastRecord{42472b30 u0 android.search.action.SEARCHABLES_CHANGED}
+    act=android.search.action.SEARCHABLES_CHANGED flg=0x24000010
+  #18: BroadcastRecord{423ab5c0 u0 android.intent.action.PACKAGE_REPLACED}
+    act=android.intent.action.PACKAGE_REPLACED dat=package:org.yanzi.playcamera flg=0x4000010 (has extras)
+    extras: Bundle[{android.intent.extra.UID=10073, android.intent.extra.REPLACING=true, android.intent.extra.user_handle=0}]
+  #19: BroadcastRecord{42428ee0 u0 android.intent.action.PACKAGE_ADDED}
+    act=android.intent.action.PACKAGE_ADDED dat=package:org.yanzi.playcamera flg=0x4000010 (has extras)
+    extras: Bundle[{android.intent.extra.UID=10073, android.intent.extra.REPLACING=true, android.intent.extra.user_handle=0}]
+  #20: BroadcastRecord{42303460 u0 android.intent.action.PACKAGE_REMOVED}
+    act=android.intent.action.PACKAGE_REMOVED dat=package:org.yanzi.playcamera flg=0x4000010 (has extras)
+    extras: Bundle[{android.intent.extra.REMOVED_FOR_ALL_USERS=false, android.intent.extra.UID=10073, android.intent.extra.DATA_REMOVED=false, android.intent.extra.REPLACING=true, android.intent.extra.user_handle=0}]
+  #21: BroadcastRecord{42389e38 u0 android.intent.action.PACKAGE_REPLACED}
+    act=android.intent.action.PACKAGE_REPLACED dat=package:org.yanzi.playcamera flg=0x4000010 (has extras)
+    extras: Bundle[{android.intent.extra.UID=10073, android.intent.extra.REPLACING=true, android.intent.extra.user_handle=0}]
+  #22: BroadcastRecord{4234c5d8 u0 android.intent.action.PACKAGE_ADDED}
+    act=android.intent.action.PACKAGE_ADDED dat=package:org.yanzi.playcamera flg=0x4000010 (has extras)
+    extras: Bundle[{android.intent.extra.UID=10073, android.intent.extra.REPLACING=true, android.intent.extra.user_handle=0}]
+  #23: BroadcastRecord{42303390 u0 android.intent.action.PACKAGE_REMOVED}
+    act=android.intent.action.PACKAGE_REMOVED dat=package:org.yanzi.playcamera flg=0x4000010 (has extras)
+    extras: Bundle[{android.intent.extra.REMOVED_FOR_ALL_USERS=false, android.intent.extra.UID=10073, android.intent.extra.DATA_REMOVED=false, android.intent.extra.REPLACING=true, android.intent.extra.user_handle=0}]
+  #24: BroadcastRecord{42399d50 u0 android.intent.action.PACKAGE_RESTARTED}
+    act=android.intent.action.PACKAGE_RESTARTED dat=package:org.yanzi.playcamera flg=0x10 (has extras)
+    extras: Bundle[{android.intent.extra.UID=10073, android.intent.extra.user_handle=0}]
+  #25: BroadcastRecord{4247f9b8 u0 android.search.action.SEARCHABLES_CHANGED}
+    act=android.search.action.SEARCHABLES_CHANGED flg=0x24000010
+  #26: BroadcastRecord{424a8210 u0 android.search.action.SEARCHABLES_CHANGED}
+    act=android.search.action.SEARCHABLES_CHANGED flg=0x24000010
+  #27: BroadcastRecord{4240e660 u0 android.intent.action.PACKAGE_REPLACED}
+    act=android.intent.action.PACKAGE_REPLACED dat=package:org.yanzi.playcamera flg=0x4000010 (has extras)
+    extras: Bundle[{android.intent.extra.UID=10073, android.intent.extra.REPLACING=true, android.intent.extra.user_handle=0}]
+  #28: BroadcastRecord{42420678 u0 android.intent.action.PACKAGE_ADDED}
+    act=android.intent.action.PACKAGE_ADDED dat=package:org.yanzi.playcamera flg=0x4000010 (has extras)
+    extras: Bundle[{android.intent.extra.UID=10073, android.intent.extra.REPLACING=true, android.intent.extra.user_handle=0}]
+  #29: BroadcastRecord{42439dc0 u0 android.intent.action.PACKAGE_REMOVED}
+    act=android.intent.action.PACKAGE_REMOVED dat=package:org.yanzi.playcamera flg=0x4000010 (has extras)
+    extras: Bundle[{android.intent.extra.REMOVED_FOR_ALL_USERS=false, android.intent.extra.UID=10073, android.intent.extra.DATA_REMOVED=false, android.intent.extra.REPLACING=true, android.intent.extra.user_handle=0}]
+  #30: BroadcastRecord{424103e8 u0 android.intent.action.PACKAGE_REPLACED}
+    act=android.intent.action.PACKAGE_REPLACED dat=package:org.yanzi.playcamera flg=0x4000010 (has extras)
+    extras: Bundle[{android.intent.extra.UID=10073, android.intent.extra.REPLACING=true, android.intent.extra.user_handle=0}]
+  #31: BroadcastRecord{42439c50 u0 android.intent.action.PACKAGE_ADDED}
+    act=android.intent.action.PACKAGE_ADDED dat=package:org.yanzi.playcamera flg=0x4000010 (has extras)
+    extras: Bundle[{android.intent.extra.UID=10073, android.intent.extra.REPLACING=true, android.intent.extra.user_handle=0}]
+  #32: BroadcastRecord{4243ac00 u0 android.intent.action.PACKAGE_REMOVED}
+    act=android.intent.action.PACKAGE_REMOVED dat=package:org.yanzi.playcamera flg=0x4000010 (has extras)
+    extras: Bundle[{android.intent.extra.REMOVED_FOR_ALL_USERS=false, android.intent.extra.UID=10073, android.intent.extra.DATA_REMOVED=false, android.intent.extra.REPLACING=true, android.intent.extra.user_handle=0}]
+  #33: BroadcastRecord{42468e88 u0 android.intent.action.PACKAGE_RESTARTED}
+    act=android.intent.action.PACKAGE_RESTARTED dat=package:org.yanzi.playcamera flg=0x10 (has extras)
+    extras: Bundle[{android.intent.extra.UID=10073, android.intent.extra.user_handle=0}]
+  #34: BroadcastRecord{425066a0 u0 android.search.action.SEARCHABLES_CHANGED}
+    act=android.search.action.SEARCHABLES_CHANGED flg=0x24000010
+  #35: BroadcastRecord{424f7210 u0 android.search.action.SEARCHABLES_CHANGED}
+    act=android.search.action.SEARCHABLES_CHANGED flg=0x24000010
+  #36: BroadcastRecord{42444eb8 u0 android.intent.action.PACKAGE_REPLACED}
+    act=android.intent.action.PACKAGE_REPLACED dat=package:org.yanzi.playcamera flg=0x4000010 (has extras)
+    extras: Bundle[{android.intent.extra.UID=10073, android.intent.extra.REPLACING=true, android.intent.extra.user_handle=0}]
+  #37: BroadcastRecord{4250bf68 u0 android.intent.action.PACKAGE_ADDED}
+    act=android.intent.action.PACKAGE_ADDED dat=package:org.yanzi.playcamera flg=0x4000010 (has extras)
+    extras: Bundle[{android.intent.extra.UID=10073, android.intent.extra.REPLACING=true, android.intent.extra.user_handle=0}]
+  #38: BroadcastRecord{422d7c70 u0 android.intent.action.PACKAGE_REMOVED}
+    act=android.intent.action.PACKAGE_REMOVED dat=package:org.yanzi.playcamera flg=0x4000010 (has extras)
+    extras: Bundle[{android.intent.extra.REMOVED_FOR_ALL_USERS=false, android.intent.extra.UID=10073, android.intent.extra.DATA_REMOVED=false, android.intent.extra.REPLACING=true, android.intent.extra.user_handle=0}]
+  #39: BroadcastRecord{42444d58 u0 android.intent.action.PACKAGE_REPLACED}
+    act=android.intent.action.PACKAGE_REPLACED dat=package:org.yanzi.playcamera flg=0x4000010 (has extras)
+    extras: Bundle[{android.intent.extra.UID=10073, android.intent.extra.REPLACING=true, android.intent.extra.user_handle=0}]
+  #40: BroadcastRecord{4250be98 u0 android.intent.action.PACKAGE_ADDED}
+    act=android.intent.action.PACKAGE_ADDED dat=package:org.yanzi.playcamera flg=0x4000010 (has extras)
+    extras: Bundle[{android.intent.extra.UID=10073, android.intent.extra.REPLACING=true, android.intent.extra.user_handle=0}]
+  #41: BroadcastRecord{422d7ba0 u0 android.intent.action.PACKAGE_REMOVED}
+    act=android.intent.action.PACKAGE_REMOVED dat=package:org.yanzi.playcamera flg=0x4000010 (has extras)
+    extras: Bundle[{android.intent.extra.REMOVED_FOR_ALL_USERS=false, android.intent.extra.UID=10073, android.intent.extra.DATA_REMOVED=false, android.intent.extra.REPLACING=true, android.intent.extra.user_handle=0}]
+  #42: BroadcastRecord{4245a6f8 u-1 android.net.wifi.RSSI_CHANGED}
+    act=android.net.wifi.RSSI_CHANGED flg=0x4000010 (has extras)
+    extras: Bundle[{newRssi=-66}]
+  #43: BroadcastRecord{424af088 u0 com.android.inputmethod.latin.personalization.DICT_DECAY}
+    act=com.android.inputmethod.latin.personalization.DICT_DECAY flg=0x14 (has extras)
+    targetComp: {com.android.inputmethod.latin/com.android.inputmethod.latin.personalization.DictionaryDecayBroadcastReciever}
+    extras: Bundle[{android.intent.extra.ALARM_COUNT=1}]
+  #44: BroadcastRecord{42537e40 u0 android.content.syncmanager.SYNC_ALARM}
+    act=android.content.syncmanager.SYNC_ALARM flg=0x14 (has extras)
+    extras: Bundle[{android.intent.extra.ALARM_COUNT=1}]
+  #45: BroadcastRecord{42538278 u0 com.android.server.action.NETWORK_STATS_POLL}
+    act=com.android.server.action.NETWORK_STATS_POLL flg=0x14 (has extras)
+    extras: Bundle[{android.intent.extra.ALARM_COUNT=1}]
+  #46: BroadcastRecord{42466db8 u-1 com.android.server.action.NETWORK_STATS_UPDATED}
+    act=com.android.server.action.NETWORK_STATS_UPDATED flg=0x40000010
+  #47: BroadcastRecord{425395c0 u-1 android.net.wifi.RSSI_CHANGED}
+    act=android.net.wifi.RSSI_CHANGED flg=0x4000010 (has extras)
+    extras: Bundle[{newRssi=-67}]
+  #48: BroadcastRecord{42535730 u0 com.tencent.QQBrowser.action.residentnotification.weather.timer.start}
+    act=com.tencent.QQBrowser.action.residentnotification.weather.timer.start flg=0x10
+  #49: BroadcastRecord{42460838 u0 com.tencent.QQBrowser.action.residentnotification.weather.timer.stop}
+    act=com.tencent.QQBrowser.action.residentnotification.weather.timer.stop flg=0x10
+  ...
+
+  Sticky broadcasts for user -1:
+  * Sticky action android.intent.action.SERVICE_STATE
+  * Sticky action android.net.wifi.WIFI_STATE_CHANGED
+  * Sticky action android.net.wifi.p2p.CONNECTION_STATE_CHANGE
+  * Sticky action android.net.conn.TETHER_STATE_CHANGED
+  * Sticky action android.media.ACTION_SCO_AUDIO_STATE_UPDATED
+  * Sticky action android.net.wifi.p2p.THIS_DEVICE_CHANGED
+  * Sticky action android.intent.action.BATTERY_CHANGED
+  * Sticky action android.net.conn.CONNECTIVITY_CHANGE
+  * Sticky action android.intent.action.ANY_DATA_STATE
+  * Sticky action android.provider.Telephony.SPN_STRINGS_UPDATED
+  * Sticky action android.net.ethernet.ETHERNET_STATE_CHANGED
+  * Sticky action android.net.nsd.STATE_CHANGED
+  * Sticky action android.hardware.usb.action.USB_STATE
+  * Sticky action android.net.wifi.RSSI_CHANGED
+  * Sticky action android.net.wifi.STATE_CHANGE
+  * Sticky action android.intent.action.SIM_STATE_CHANGED
+  * Sticky action android.net.wifi.supplicant.STATE_CHANGE
+  * Sticky action android.net.wifi.p2p.PERSISTENT_GROUPS_CHANGED
+  * Sticky action android.net.conn.CONNECTIVITY_CHANGE_IMMEDIATE
+  * Sticky action android.media.SCO_AUDIO_STATE_CHANGED
+  * Sticky action android.os.UpdateLock.UPDATE_LOCK_CHANGED
+  * Sticky action android.media.MASTER_MUTE_CHANGED_ACTION
+  * Sticky action wifi_scan_available
+  * Sticky action android.net.wifi.p2p.STATE_CHANGED
+  * Sticky action android.intent.action.HDMI_PLUGGED
+  * Sticky action android.media.RINGER_MODE_CHANGED
+
+  Sticky broadcasts for user 0:
+  * Sticky action com.android.music.queuechanged
+  * Sticky action com.android.music.metachanged
+
+ACTIVITY MANAGER CONTENT PROVIDERS (dumpsys activity providers)
+  Published single-user content providers (by class):
+  * ContentProviderRecord{422341b8 u0 com.android.phone/.IccProvider}
+    proc=ProcessRecord{42275b70 617:com.android.phone/1001}
+    singleton=true
+    authority=icc
+  * ContentProviderRecord{420d17f0 u0 com.android.providers.settings/.SettingsProvider}
+    proc=ProcessRecord{420bc768 409:system/1000}
+    singleton=true
+    authority=settings
+    11 connections, 0 external handles
+      -> 494:com.android.systemui/u0a7 s1/1 u0/0 +20h6m7s928ms
+      -> 617:com.android.phone/1001 s1/1 u0/0 +20h6m5s690ms
+      -> 602:com.android.inputmethod.latin/u0a28 s1/1 u0/0 +20h6m5s418ms
+      -> 570:android.process.media/u0a5 s1/1 u0/0 +20h6m4s343ms
+      -> 804:com.tencent.qqlite:MSF/u0a58 s1/1 u0/0 +20h6m1s531ms
+      -> 899:android:userExpericenceService/1000 s1/1 u0/0 +20h5m59s867ms
+      -> 987:com.android.deskclock/u0a19 s1/1 u0/0 +20h5m49s901ms
+      -> 1058:com.tencent.mtt:service/u0a57 s1/1 u0/0 +20h5m41s882ms
+      -> 634:com.android.launcher3/u0a29 s1/1 u0/0 +20h2m56s214ms
+      -> 1096:com.tencent.mtt/u0a57 s1/1 u0/0 +20h2m55s287ms
+      -> 1633:com.android.defcontainer/u0a3 s1/1 u0/0 +19h53m7s789ms
+
+  Published user 0 content providers (by class):
+  * ContentProviderRecord{421802b0 u0 com.tencent.mtt/com.tencent.qlauncher.external.sdk.QlauncherExtProvider}
+    proc=ProcessRecord{422ddfa0 1096:com.tencent.mtt/u0a57}
+    authority=com.tencent.mtt.qlauncher.external.provider
+  * ContentProviderRecord{422e9608 u0 org.yanzi.playcamera/com.google.firebase.provider.FirebaseInitProvider}
+    proc=ProcessRecord{42329ca8 21982:org.yanzi.playcamera/u0a73}
+    authority=org.yanzi.playcamera.firebaseinitprovider
+  * ContentProviderRecord{42257e20 u0 com.android.providers.contacts/.VoicemailContentProvider}
+    proc=ProcessRecord{421ab848 665:android.process.acore/u0a2}
+    authority=com.android.voicemail
+  * ContentProviderRecord{42169050 u0 com.tencent.mtt/com.tencent.downloadprovider.QBDownloadProvider}
+    proc=ProcessRecord{422ddfa0 1096:com.tencent.mtt/u0a57}
+    authority=com.tencent.downloadprovider.QBDownloadProvider
+  * ContentProviderRecord{4215b7d0 u0 com.tencent.mtt/.browser.bookmark.engine.BookmarkProvider}
+    proc=ProcessRecord{422ddfa0 1096:com.tencent.mtt/u0a57}
+    authority=mtt_bookmarks
+  * ContentProviderRecord{41fc55f8 u0 com.svox.pico/.providers.SettingsProvider}
+    proc=ProcessRecord{42244090 1714:com.svox.pico/u0a41}
+    authority=com.svox.pico.providers.SettingsProvider
+  * ContentProviderRecord{42185ab0 u0 com.tencent.mtt/.external.market.inhost.QQMarketContentProvider}
+    proc=ProcessRecord{422ddfa0 1096:com.tencent.mtt/u0a57}
+    authority=mtt_qqmarket
+  * ContentProviderRecord{42257eb8 u0 com.android.providers.contacts/.debug.DumpFileProvider}
+    proc=ProcessRecord{421ab848 665:android.process.acore/u0a2}
+    authority=com.android.contacts.dumpfile
+  * ContentProviderRecord{422538f8 u0 com.android.providers.media/.MediaProvider}
+    proc=ProcessRecord{42221768 570:android.process.media/u0a5}
+    authority=media
+  * ContentProviderRecord{422323e0 u0 com.android.providers.telephony/.MmsProvider}
+    proc=ProcessRecord{42275b70 617:com.android.phone/1001}
+    authority=mms
+  * ContentProviderRecord{421f26b8 u0 com.android.gallery3d/.filtershow.provider.SharedImageProvider}
+    proc=ProcessRecord{42322fc8 21093:com.android.gallery3d/u0a25}
+    authority=com.android.gallery3d.filtershow.provider.SharedImageProvider
+  * ContentProviderRecord{42231ff0 u0 com.android.providers.telephony/.SmsProvider}
+    proc=ProcessRecord{42275b70 617:com.android.phone/1001}
+    authority=sms
+  * ContentProviderRecord{42242240 u0 com.android.launcher3/.LauncherProvider}
+    proc=ProcessRecord{4228fc98 634:com.android.launcher3/u0a29}
+    authority=com.android.launcher3.settings
+  * ContentProviderRecord{42234288 u0 com.android.providers.telephony/.TelephonyProvider}
+    proc=ProcessRecord{42275b70 617:com.android.phone/1001}
+    authority=telephony
+  * ContentProviderRecord{4220d3a0 u0 com.android.providers.downloads/.DownloadProvider}
+    proc=ProcessRecord{42221768 570:android.process.media/u0a5}
+    authority=downloads
+  * ContentProviderRecord{421ed2e0 u0 com.android.gallery3d/.provider.GalleryProvider}
+    proc=ProcessRecord{42322fc8 21093:com.android.gallery3d/u0a25}
+    authority=com.android.gallery3d.provider
+  * ContentProviderRecord{421190e8 u0 com.tencent.mtt/.browser.file.weiyun.WeiyunOfflineContentProvider}
+    proc=ProcessRecord{422ddfa0 1096:com.tencent.mtt/u0a57}
+    authority=mtt.weiyun.offline
+  * ContentProviderRecord{4220d710 u0 com.android.providers.media/.MediaDocumentsProvider}
+    proc=ProcessRecord{42221768 570:android.process.media/u0a5}
+    authority=com.android.providers.media.documents
+  * ContentProviderRecord{421e7600 u0 com.android.gallery3d/com.android.photos.data.PhotoProvider}
+    proc=ProcessRecord{42322fc8 21093:com.android.gallery3d/u0a25}
+    authority=com.android.gallery3d.photoprovider
+  * ContentProviderRecord{4226ed80 u0 com.android.inputmethod.latin/com.android.inputmethod.dictionarypack.DictionaryProvider}
+    proc=ProcessRecord{4223be20 602:com.android.inputmethod.latin/u0a28}
+    authority=com.android.inputmethod.dictionarypack.aosp
+  * ContentProviderRecord{4220a978 u0 com.android.deskclock/.provider.ClockProvider}
+    proc=ProcessRecord{422dc640 987:com.android.deskclock/u0a19}
+    authority=com.android.deskclock
+  * ContentProviderRecord{4227e9a0 u0 com.android.providers.contacts/.ContactsProvider2}
+    proc=ProcessRecord{421ab848 665:android.process.acore/u0a2}
+    launchingApp=ProcessRecord{421ab848 665:android.process.acore/u0a2}
+    authority=contacts;com.android.contacts
+  * ContentProviderRecord{42230ab8 u0 com.android.providers.telephony/.MmsSmsProvider}
+    proc=ProcessRecord{42275b70 617:com.android.phone/1001}
+    authority=mms-sms
+  * ContentProviderRecord{4220d678 u0 com.android.providers.downloads/.DownloadStorageProvider}
+    proc=ProcessRecord{42221768 570:android.process.media/u0a5}
+    authority=com.android.providers.downloads.documents
+  * ContentProviderRecord{42276bc0 u0 com.android.providers.contacts/.CallLogProvider}
+    proc=ProcessRecord{421ab848 665:android.process.acore/u0a2}
+    authority=call_log
+  * ContentProviderRecord{42257f50 u0 com.android.providers.userdictionary/.UserDictionaryProvider}
+    proc=ProcessRecord{421ab848 665:android.process.acore/u0a2}
+    authority=user_dictionary
+  * ContentProviderRecord{4220a258 u0 com.tencent.mtt/.browser.setting.multiproc.QBSettingsProvider}
+    proc=ProcessRecord{422ddfa0 1096:com.tencent.mtt/u0a57}
+    launchingApp=ProcessRecord{422ddfa0 1096:com.tencent.mtt/u0a57}
+    authority=qb_settings
+
+ACTIVITY MANAGER SERVICES (dumpsys activity services)
+  User 0 active services:
+  * ServiceRecord{42259b08 u0 com.android.bluetooth/.hid.HidService}
+    app=null
+    created=-20h6m5s665ms started=false connections=0
+  * ServiceRecord{422beee0 u0 com.tencent.mtt/.sdk.BrowserSdkService}
+    app=ProcessRecord{422ddfa0 1096:com.tencent.mtt/u0a57}
+    created=-20h1m28s536ms started=true connections=2
+    Connections:
+      act=com.tencent.mtt.ACTION_PLUGIN_SERV -> 1058:com.tencent.mtt:service/u0a57
+      act=com.tencent.mtt.ACTION_WUP -> 1058:com.tencent.mtt:service/u0a57
+  * ServiceRecord{422c4718 u0 com.android.phone/.BluetoothPhoneService}
+    app=ProcessRecord{42275b70 617:com.android.phone/1001}
+    created=-20h6m5s288ms started=true connections=1
+    Connections:
+       -> 617:com.android.phone/1001
+  * ServiceRecord{422302e8 u0 com.android.systemui/.ImageWallpaper}
+    app=ProcessRecord{4220efb0 494:com.android.systemui/u0a7}
+    created=-20h6m6s961ms started=false connections=1
+    Connections:
+      act=android.service.wallpaper.WallpaperService -> 409:system/1000
+  * ServiceRecord{4223b3b0 u0 com.android.inputmethod.latin/.LatinIME}
+    app=ProcessRecord{4223be20 602:com.android.inputmethod.latin/u0a28}
+    created=-20h6m6s939ms started=false connections=1
+    Connections:
+      act=android.view.InputMethod -> 409:system/1000
+  * ServiceRecord{4219f5b0 u0 com.android.keyguard/.KeyguardService}
+    app=ProcessRecord{4220efb0 494:com.android.systemui/u0a7}
+    created=-20h6m8s199ms started=false connections=1
+    Connections:
+       -> 409:system/1000
+  * ServiceRecord{422e0f30 u0 android.rockchip.update.service/.RKUpdateService}
+    app=ProcessRecord{42223d58 587:android.rockchip.update.service/u0a45}
+    created=-20h5m49s112ms started=true connections=0
+  * ServiceRecord{4224e218 u0 com.android.bluetooth/.pbap.BluetoothPbapService}
+    app=null
+    created=-20h6m5s649ms started=false connections=0
+  * ServiceRecord{42310d58 u0 android/com.android.user.experience.UserExperienceService}
+    app=ProcessRecord{42218728 899:android:userExpericenceService/1000}
+    created=-20h6m0s134ms started=true connections=0
+  * ServiceRecord{4225a9c0 u0 com.android.bluetooth/.a2dp.A2dpService}
+    app=null
+    created=-20h6m0s252ms started=false connections=1
+    Connections:
+      act=android.bluetooth.IBluetoothA2dp -> 409:system/1000
+  * ServiceRecord{421ae5c0 u0 com.android.systemui/.SystemUIService}
+    app=ProcessRecord{4220efb0 494:com.android.systemui/u0a7}
+    created=-20h6m7s725ms started=true connections=0
+  * ServiceRecord{42265238 u0 android/.hardware.location.GeofenceHardwareService}
+    app=ProcessRecord{420bc768 409:system/1000}
+    created=-20h6m6s901ms started=false connections=1
+    Connections:
+       -> 409:system/1000
+  * ServiceRecord{422d58e0 u0 com.tencent.mtt/.browser.push.service.PushRemoteService}
+    app=ProcessRecord{422372a0 1058:com.tencent.mtt:service/u0a57}
+    created=-20h5m45s579ms started=true connections=1
+    Connections:
+      act=com.tencent.mtt.service.ACTION_DEFAULT -> 1096:com.tencent.mtt/u0a57
+  * ServiceRecord{422b9b98 u0 com.android.bluetooth/.hfp.HeadsetService}
+    app=null
+    created=-20h6m5s190ms started=false connections=4
+    Connections:
+      act=android.bluetooth.IBluetoothHeadset -> 617:com.android.phone/1001
+      act=android.bluetooth.IBluetoothHeadset -> 617:com.android.phone/1001
+      act=android.bluetooth.IBluetoothHeadset -> 409:system/1000
+      act=android.bluetooth.IBluetoothHeadset -> 617:com.android.phone/1001
+  * ServiceRecord{422b0420 u0 com.android.smspush/.WapPushManager}
+    app=ProcessRecord{422b0f88 728:com.android.smspush/u0a53}
+    created=-20h6m5s442ms started=false connections=2
+    Connections:
+      act=com.android.internal.telephony.IWapPushManager -> 617:com.android.phone/1001
+      act=com.android.internal.telephony.IWapPushManager -> 617:com.android.phone/1001
+  * ServiceRecord{42325290 u0 com.tencent.mtt/.BrowserService}
+    app=ProcessRecord{422ddfa0 1096:com.tencent.mtt/u0a57}
+    created=-20h1m28s303ms started=true connections=1
+    Connections:
+      act=com.tencent.mtt.ACTION_STAT -> 1058:com.tencent.mtt:service/u0a57
+  * ServiceRecord{42218ee0 u0 android/com.android.internal.backup.LocalTransportService}
+    app=ProcessRecord{420bc768 409:system/1000}
+    created=-20h6m8s300ms started=false connections=1
+    Connections:
+      act=android.backup.TRANSPORT_HOST -> 409:system/1000
+  * ServiceRecord{4225fea0 u0 com.android.location.fused/.FusedLocationService}
+    app=ProcessRecord{420bc768 409:system/1000}
+    created=-20h6m6s913ms started=false connections=1
+    Connections:
+      act=com.android.location.service.FusedLocationProvider pkg=com.android.location.fused -> 409:system/1000
+  * ServiceRecord{423125c0 u0 com.tencent.qqlite/com.tencent.mobileqq.msf.service.MsfService}
+    app=ProcessRecord{422eab48 804:com.tencent.qqlite:MSF/u0a58}
+    created=-20h6m1s985ms started=true connections=0
+  * ServiceRecord{4225af58 u0 com.android.bluetooth/.map.BluetoothMapService}
+    app=null
+    created=-20h6m5s654ms started=false connections=0
+  * ServiceRecord{422c2b58 u0 com.android.phone/.TelephonyDebugService}
+    app=ProcessRecord{42275b70 617:com.android.phone/1001}
+    created=-20h6m5s340ms started=true connections=0
+  * ServiceRecord{421dcac0 u0 com.android.bluetooth/.pan.PanService}
+    app=null
+    created=-20h6m8s701ms started=false connections=1
+    Connections:
+      act=android.bluetooth.IBluetoothPan -> 409:system/1000
+
+ACTIVITY MANAGER ACTIVITIES (dumpsys activity activities)
+  Stack #0:
+    Task id #1
+      TaskRecord{4228d718 #1 A=com.android.launcher3 U=0 sz=1}
+      Intent { act=android.intent.action.MAIN cat=[android.intent.category.HOME] flg=0x10000000 cmp=com.android.launcher3/.Launcher }
+        Hist #0: ActivityRecord{4228ae60 u0 com.android.launcher3/.Launcher t1}
+          Intent { act=android.intent.action.MAIN cat=[android.intent.category.HOME] flg=0x10000000 cmp=com.android.launcher3/.Launcher }
+          ProcessRecord{4228fc98 634:com.android.launcher3/u0a29}
+
+    Running activities (most recent first):
+      TaskRecord{4228d718 #1 A=com.android.launcher3 U=0 sz=1}
+        Run #0: ActivityRecord{4228ae60 u0 com.android.launcher3/.Launcher t1}
+
+  Stack #1:
+    Task id #36
+      TaskRecord{423a7a80 #36 A=org.yanzi.playcamera U=0 sz=1}
+      Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10000000 cmp=org.yanzi.playcamera/org.yanzi.activity.StartActivity }
+        Hist #0: ActivityRecord{4216f050 u0 org.yanzi.playcamera/org.yanzi.activity.StartActivity t36}
+          Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10000000 cmp=org.yanzi.playcamera/org.yanzi.activity.StartActivity }
+          ProcessRecord{42329ca8 21982:org.yanzi.playcamera/u0a73}
+
+    Task id #18
+      TaskRecord{42321178 #18 A=com.tencent.mtt U=0 sz=1}
+      Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10200000 pkg=com.tencent.mtt cmp=com.tencent.mtt/.SplashActivity }
+        Hist #0: ActivityRecord{422771c0 u0 com.tencent.mtt/.MainActivity t18}
+          Intent { cmp=com.tencent.mtt/.MainActivity bnds=[1,144][134,327] }
+          ProcessRecord{422ddfa0 1096:com.tencent.mtt/u0a57}
+
+    Running activities (most recent first):
+      TaskRecord{423a7a80 #36 A=org.yanzi.playcamera U=0 sz=1}
+        Run #1: ActivityRecord{4216f050 u0 org.yanzi.playcamera/org.yanzi.activity.StartActivity t36}
+      TaskRecord{42321178 #18 A=com.tencent.mtt U=0 sz=1}
+        Run #0: ActivityRecord{422771c0 u0 com.tencent.mtt/.MainActivity t18}
+
+    mResumedActivity: ActivityRecord{4216f050 u0 org.yanzi.playcamera/org.yanzi.activity.StartActivity t36}
+
+  mFocusedActivity: ActivityRecord{4216f050 u0 org.yanzi.playcamera/org.yanzi.activity.StartActivity t36}
+  mDismissKeyguardOnNextActivity=false
+  mFocusedStack=ActivityStack{422a1ec8 stackId=1, 2 tasks} mStackState=STACK_STATE_HOME_IN_BACK
+  mSleepTimeout=false
+  mCurTaskId=36
+  mUserStackInFront={}
+
+  Recent tasks:
+  * Recent #0: TaskRecord{423a7a80 #36 A=org.yanzi.playcamera U=0 sz=1}
+  * Recent #1: TaskRecord{42321178 #18 A=com.tencent.mtt U=0 sz=1}
+  * Recent #2: TaskRecord{4228d718 #1 A=com.android.launcher3 U=0 sz=1}
+  * Recent #3: TaskRecord{422ef6e0 #17 A=com.android.systemui U=0 sz=0}
+
+ACTIVITY MANAGER RUNNING PROCESSES (dumpsys activity processes)
+  Process LRU list (sorted by oom_adj, 21 total, non-act at 4, non-svc at 4):
+    PERS #20: sys   F/ /P  trm: 0 409:system/1000 (fixed)
+    PERS #19: pers  F/ /P  trm: 0 494:com.android.systemui/u0a7 (fixed)
+    PERS #18: pers  F/ /P  trm: 0 617:com.android.phone/1001 (fixed)
+    Proc # 0: fore  F/A/T  trm: 0 21982:org.yanzi.playcamera/u0a73 (top-activity)
+    Proc #17: vis   F/ /IF trm: 0 728:com.android.smspush/u0a53 (service)
+        com.android.smspush/.WapPushManager<=Proc{617:com.android.phone/1001}
+    Proc #11: prcp  F/ /IF trm: 0 602:com.android.inputmethod.latin/u0a28 (service)
+        com.android.inputmethod.latin/.LatinIME<=Proc{409:system/1000}
+    Proc # 2: svc   F/ /IF trm: 0 1058:com.tencent.mtt:service/u0a57 (started-services)
+    Proc # 3: home  B/ /HO trm: 0 634:com.android.launcher3/u0a29 (home)
+    Proc # 1: prev  F/ /IF trm: 0 1096:com.tencent.mtt/u0a57 (cch-bound-ui-services)
+        com.tencent.mtt/.sdk.BrowserSdkService<=Proc{1058:com.tencent.mtt:service/u0a57}
+    Proc #13: svcb  B/ /S  trm: 0 587:android.rockchip.update.service/u0a45 (started-services)
+    Proc # 5: cch   B/ /CE trm: 0 665:android.process.acore/u0a2 (cch-empty)
+    Proc # 4: cch   B/ /CE trm: 0 1633:com.android.defcontainer/u0a3 (cch-empty)
+    Proc # 7: cch+2 B/ /CE trm: 0 1226:com.android.musicfx/u0a8 (cch-empty)
+    Proc # 6: cch+2 B/ /CE trm: 0 1686:com.tencent.qqlite:web/u0a58 (cch-empty)
+    Proc # 9: cch+4 B/ /CE trm: 0 21093:com.android.gallery3d/u0a25 (cch-empty)
+    Proc # 8: cch+4 B/ /CE trm: 0 1714:com.svox.pico/u0a41 (cch-empty)
+    Proc #16: cch+6 B/ /S  trm: 0 899:android:userExpericenceService/1000 (cch-started-services)
+    Proc #15: cch+6 B/ /CE trm: 0 987:com.android.deskclock/u0a19 (cch-empty)
+    Proc #14: cch+6 B/ /CE trm: 0 570:android.process.media/u0a5 (cch-empty)
+    Proc #12: cch+6 B/ /S  trm: 0 804:com.tencent.qqlite:MSF/u0a58 (cch-started-services)
+    Proc #10: cch+6 B/ /CE trm: 0 21108:com.android.keychain/1000 (cch-empty)
+
+  mStartedUsers:
+    User #0: mState=RUNNING
+  mStartedUserArray: [0]
+  mUserLru: [0]
+  mHomeProcess: ProcessRecord{4228fc98 634:com.android.launcher3/u0a29}
+  mPreviousProcess: ProcessRecord{422ddfa0 1096:com.tencent.mtt/u0a57}
+  mConfiguration: {1.0 ?mcc?mnc zh_CN ldltr sw800dp w1280dp h727dp 160dpi xlrg land -touch -keyb/v/h -nav/h s.10}
