@@ -64,6 +64,8 @@ import com.lidroid.xutils.DbUtils;
 import com.lidroid.xutils.exception.DbException;
 import com.zhy.http.okhttp.OkHttpUtils;
 import com.zhy.http.okhttp.callback.StringCallback;
+import com.zhy.http.okhttp.utils.Exceptions;
+
 import org.yanzi.camera.preview.CameraSurfaceView;
 import org.yanzi.mode.ApkVersion;
 import org.yanzi.mode.FaceData;
@@ -89,6 +91,8 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.UUID;
+
 import okhttp3.Call;
 
 public class CameraActivity extends FragmentActivity{
@@ -676,48 +680,72 @@ public class CameraActivity extends FragmentActivity{
 //				msg1.obj = idFaceBitmap;
 //				msg1.what = 0x124;
 //				handler.sendMessage(msg1);
-
-				if(cameraFaceBitmap != null&&idFaceBitmap != null){
+				try{
+					if(cameraFaceBitmap != null&&idFaceBitmap != null){
 //					faceBitmap = util.rotateBitmap(cameraFaceBitmap, m);
 //					handler.sendEmptyMessage(0x6661);
-					onceName = HsOtgService.ic.getIDCard()+"A.bmp";
-					Util.saveBitmap(faceBitmap, onceName);
-					long time5 = System.currentTimeMillis();
-					Log.d("TT", "保存摄像头照片--------------"+(time5-time4));
-					Util.saveBitmap(idFaceBitmap, HsOtgService.ic.getIDCard()+".bmp");
-					long time6 = System.currentTimeMillis();
-					Log.d("TT", "保存身份证照片--------------"+(time6-time5));
+						String uuid = UUID.randomUUID().toString();
+						onceName = uuid+".bmp";
+						Log.d("Hope", "UUID is "+uuid);
+						Util.saveBitmap(faceBitmap, onceName);
+						long time5 = System.currentTimeMillis();
+						Log.d("TT", "保存摄像头照片--------------"+(time5-time4));
+						Util.saveBitmap(idFaceBitmap, "b.bmp");//HsOtgService.ic.getIDCard()+".bmp"
+						long time6 = System.currentTimeMillis();
+						Log.d("TT", "保存身份证照片--------------"+(time6-time5));
 
-					JniTool.faceFeatureExtractCamera(onceName);
-					long time7 = System.currentTimeMillis();
-					Log.d("TT", "C处理摄像头照片--------------"+(time7-time6));
+						int i = JniTool.faceFeatureExtractCamera(onceName);
+						Log.d("Hope", "arr is No1 is "+ i);
+						long time7 = System.currentTimeMillis();
+						Log.d("TT", "C处理摄像头照片--------------"+(time7-time6));
 
-					JniTool.faceFeatureExtractIDCard(HsOtgService.ic.getIDCard()+".bmp");
-					long time8 = System.currentTimeMillis();
-					Log.d("TT", "C处理身份证照片--------------"+(time8-time7));
+						int j = JniTool.faceFeatureExtractIDCard("b.bmp");
+						long time8 = System.currentTimeMillis();
+						Log.d("TT", "C处理身份证照片--------------"+(time8-time7));
 
-					result = JniTool.faceFeatureCompare();
-					time9 = System.currentTimeMillis();
-					Log.d("TT", "C进行比对--------------"+(time9-time8));
+						if(i != 0 && j != 0){
+							result = JniTool.faceFeatureCompare();
+						}
 
-				}
+						try{
+							if(i == 0 || j == 0){
+								Log.d("TT", "zzzzzzzzzzzzzzzzzzzzzzzzzz");
+								handler.sendEmptyMessage(0x126);
+							}else {
+								if(coors == null){
+									Log.d("TT", "coor is null!");
+									if(result > 0.29f){
+										Log.d("TT", "xxxxxxxxxxxxxxxxxx");
+										handler.sendEmptyMessage(0x125);
+										flag_result = true;
+									} else {
+										Log.d("TT", "yyyyyyyyyyyyyyyyyyy");
+										handler.sendEmptyMessage(0x126);
+										flag_result = true;
+									}
+								} else {
+									if(result > 0.29f && coors[0] != 0){
+										Log.d("TT", "xxxxxxxxxxxxxxxxxx");
 
-				Log.d("Hope", "result's value is "+result);
+										handler.sendEmptyMessage(0x125);
+										flag_result = true;
+									} else {
+										Log.d("TT", "yyyyyyyyyyyyyyyyyyy");
+										handler.sendEmptyMessage(0x126);
+										flag_result = true;
+									}
+								}
+							}
+						}catch (Exception e){
+							Log.d("TT", "some exception is happened, the exception is "+e.getMessage());
+							handler.sendEmptyMessage(0x126);
 
-				if((result+"").equals("NaN")){
-					handler.sendEmptyMessage(0x126);
-				}else {
-
-					if(result > 0.29 && coors[0] != 0){
-						handler.sendEmptyMessage(0x125);
-						Log.d("TT", "xxxxxxxxxxxxxxxxxx");
-						flag_result = true;
-					} else {
-						handler.sendEmptyMessage(0x126);
-						Log.d("TT", "yyyyyyyyyyyyyyyyyyy");
-						flag_result = true;
+						}
 					}
+				}catch (Exception e){
+					Log.d("Hope", "异常发生了"+e.getMessage());
 				}
+
 
 				long time10 = System.currentTimeMillis();
 				Log.d("TT", "显示比对结果--------------"+(time10-time9));
@@ -770,7 +798,7 @@ public class CameraActivity extends FragmentActivity{
 			}finally {
 				HsOtgService.ic = null;
 				try {
-					Thread.sleep(6000);
+					Thread.sleep(10000);
 				} catch (InterruptedException e) {
 					e.printStackTrace();
 				}

@@ -22,7 +22,7 @@ public class JniTool {
 
     public static native void free();
 
-    public static native String faceFeatureExtractCamera(String imgPath);
+    public static native int faceFeatureExtractCamera(String imgPath);
 
     public static native String faceFeatureExtractCamera1(String imgPath);
 

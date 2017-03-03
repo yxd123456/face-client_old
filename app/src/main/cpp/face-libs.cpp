@@ -300,7 +300,7 @@ Java_org_yanzi_util_JniTool_getFaceRect(JNIEnv *env, jclass type, jstring imgPat
 }
 
 extern "C"
-JNIEXPORT jstring JNICALL
+JNIEXPORT jint JNICALL
 Java_org_yanzi_util_JniTool_faceFeatureExtractCamera(JNIEnv *env, jclass type, jstring imgPath_) {
     const char *imgPath = env->GetStringUTFChars(imgPath_, 0);
 
@@ -319,7 +319,7 @@ Java_org_yanzi_util_JniTool_faceFeatureExtractCamera(JNIEnv *env, jclass type, j
                                      facerc,
                                      &f2[0],
                                      1);
-//    LOGI("照片一识别返回值i为：%i", i);
+    LOGI("照片一识别返回值i为：%i", i);
 //    if(i != 0){
 //        LOGI("x：%i", facerc.x);
 //        LOGI("y：%i", facerc.y);
@@ -365,7 +365,7 @@ Java_org_yanzi_util_JniTool_faceFeatureExtractCamera(JNIEnv *env, jclass type, j
 
     env->ReleaseStringUTFChars(imgPath_, imgPath);
 
-    return env->NewStringUTF("");
+    return i;
 }
 
 extern "C"
