@@ -1,28 +1,19 @@
 package org.yanzi.activity;
 
-import android.app.Activity;
-import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.app.Service;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.content.ServiceConnection;
-import android.content.pm.ActivityInfo;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Matrix;
 import android.graphics.Paint;
-import android.graphics.Point;
 import android.graphics.Rect;
-import android.graphics.RectF;
 import android.graphics.YuvImage;
-import android.hardware.Camera;
-import android.hardware.Camera.Face;
-import android.media.AudioManager;
-import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
@@ -30,29 +21,13 @@ import android.os.Environment;
 import android.os.Handler;
 import android.os.IBinder;
 import android.os.Message;
-import android.os.SystemClock;
 import android.support.annotation.RequiresApi;
-import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
-import android.support.v4.view.LayoutInflaterCompat;
-import android.support.v7.view.menu.MenuWrapperFactory;
-import android.text.TextUtils;
 import android.util.Log;
-import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.SurfaceHolder;
-import android.view.SurfaceView;
 import android.view.View;
-import android.view.View.OnClickListener;
-import android.view.ViewGroup.LayoutParams;
-import android.view.Window;
 import android.view.WindowManager;
-import android.widget.Button;
-import android.widget.FrameLayout;
-import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.google.android.gms.appindexing.Action;
 import com.google.android.gms.appindexing.AppIndex;
@@ -64,10 +39,8 @@ import com.lidroid.xutils.DbUtils;
 import com.lidroid.xutils.exception.DbException;
 import com.zhy.http.okhttp.OkHttpUtils;
 import com.zhy.http.okhttp.callback.StringCallback;
-import com.zhy.http.okhttp.utils.Exceptions;
 
 import org.yanzi.camera.preview.CameraSurfaceView;
-import org.yanzi.mode.ApkVersion;
 import org.yanzi.mode.FaceData;
 import org.yanzi.mode.Response;
 import org.yanzi.mode.Video;
@@ -299,10 +272,6 @@ public class CameraActivity extends FragmentActivity{
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_camera);
-		Log.d("TT", "onCreate");
-
-		//Util.getCameraSize();
-
 		area = new Rect(0, 0, 800, 600);
 		matrix = new Matrix();
 		matrix.postRotate(270);
@@ -650,7 +619,6 @@ public class CameraActivity extends FragmentActivity{
 				service = new Intent(CameraActivity.this, HsOtgService.class);
 				conn = new CameraActivity.MyConn();
 				bindService(service, conn, Service.BIND_AUTO_CREATE);
-				//handler.sendEmptyMessage(0x7777);
 			}
 		}
 		ret1 = HSinterface.ReadCard();
@@ -676,14 +644,8 @@ public class CameraActivity extends FragmentActivity{
 					handler.sendEmptyMessage(0x6661);
 				}
 
-//				Message msg1 = Message.obtain();
-//				msg1.obj = idFaceBitmap;
-//				msg1.what = 0x124;
-//				handler.sendMessage(msg1);
 				try{
 					if(cameraFaceBitmap != null&&idFaceBitmap != null){
-//					faceBitmap = util.rotateBitmap(cameraFaceBitmap, m);
-//					handler.sendEmptyMessage(0x6661);
 						String uuid = UUID.randomUUID().toString();
 						onceName = uuid+".bmp";
 						Log.d("Hope", "UUID is "+uuid);
@@ -709,50 +671,34 @@ public class CameraActivity extends FragmentActivity{
 
 						try{
 							if(i == 0 || j == 0){
-								Log.d("TT", "zzzzzzzzzzzzzzzzzzzzzzzzzz");
 								handler.sendEmptyMessage(0x126);
 							}else {
 								if(coors == null){
-									Log.d("TT", "coor is null!");
 									if(result > 0.29f){
-										Log.d("TT", "xxxxxxxxxxxxxxxxxx");
 										handler.sendEmptyMessage(0x125);
 										flag_result = true;
 									} else {
-										Log.d("TT", "yyyyyyyyyyyyyyyyyyy");
 										handler.sendEmptyMessage(0x126);
 										flag_result = true;
 									}
 								} else {
 									if(result > 0.29f && coors[0] != 0){
-										Log.d("TT", "xxxxxxxxxxxxxxxxxx");
-
 										handler.sendEmptyMessage(0x125);
 										flag_result = true;
 									} else {
-										Log.d("TT", "yyyyyyyyyyyyyyyyyyy");
 										handler.sendEmptyMessage(0x126);
 										flag_result = true;
 									}
 								}
 							}
 						}catch (Exception e){
-							Log.d("TT", "some exception is happened, the exception is "+e.getMessage());
 							handler.sendEmptyMessage(0x126);
-
 						}
 					}
 				}catch (Exception e){
 					Log.d("Hope", "异常发生了"+e.getMessage());
 				}
-
-
 				long time10 = System.currentTimeMillis();
-				Log.d("TT", "显示比对结果--------------"+(time10-time9));
-
-
-				Log.d("TT", "1-----"+System.currentTimeMillis());
-
 
 				String[] info = {HsOtgService.ic.getPeopleName(),
 						HsOtgService.ic.getIDCard()};
@@ -760,7 +706,6 @@ public class CameraActivity extends FragmentActivity{
 				msg.obj = info;
 				msg.what = 0x123;
 				handler.sendMessage(msg);
-				Log.d("TT", "2-----"+System.currentTimeMillis());
 				str = JniTool.faceFeatureExtractCamera1(onceName);
 				handler.sendEmptyMessage(0x666);
 
@@ -782,10 +727,6 @@ public class CameraActivity extends FragmentActivity{
 				}
 				faceData.setCurrentTime(Util.getCurrTime());
 				faceData.setDeviceId(Util.getIMEI(CameraActivity.this));
-//				Message message = Message.obtain();
-//				message.obj = faceData;
-//				message.what = 0x1122;
-//				handler.sendMessage(message);
 				try {
 					dbUtils.save(faceData);
 				} catch (DbException e) {
@@ -798,7 +739,7 @@ public class CameraActivity extends FragmentActivity{
 			}finally {
 				HsOtgService.ic = null;
 				try {
-					Thread.sleep(10000);
+					Thread.sleep(2000);
 				} catch (InterruptedException e) {
 					e.printStackTrace();
 				}
@@ -812,7 +753,6 @@ public class CameraActivity extends FragmentActivity{
 	}
 
 	public void pushData(final FaceData data, final PushDataEnd end){
-		Log.d("Test", "the current time is"+data.getCurrentTime());
 		OkHttpUtils
 				.post()
 				.url(DATA_URL)
@@ -868,17 +808,10 @@ public class CameraActivity extends FragmentActivity{
 		iv_ic = (ImageView) findViewById(R.id.iv_ic);
 		testView = findViewById(R.id.test);
 		testView2 = findViewById(R.id.test2);
-//		testView.setRotation(90);
-//		testView.setTranslationX(-80f);
-//		testView.setTranslationY(-800f);
-//		testView2.setRotation(90);
-//		testView2.setTranslationX(350f);
-//		testView2.setTranslationY(500f);
 		ll_info = findViewById(R.id.ll_info);
 		ll_progressBar = findViewById(R.id.ll_progressBar);
 		surfaceView = (CameraSurfaceView)findViewById(R.id.camera_surfaceview);
 		iv_face = (ImageView) findViewById(R.id.iv_face);
-		//iv_face.setRotation(90f);
 		tv_current_time = (TextView) findViewById(R.id.tv_current_time);
 
 		WindowManager wm = (WindowManager)
@@ -888,7 +821,6 @@ public class CameraActivity extends FragmentActivity{
 		mHeight = wm.getDefaultDisplay().getHeight();
 
 		faceView = (FaceView) findViewById(R.id.faceView);
-		//faceView.setRects(getRect(new Rect(10, 20, 200, 300)));
 	}
 
 	public static Rect getRect(Rect rect){
@@ -909,41 +841,23 @@ public class CameraActivity extends FragmentActivity{
 	@Override
 	public void onStart() {
 		super.onStart();
-		Log.d("TT", "onStart");
-
-		// ATTENTION: This was auto-generated to implement the App Indexing API.
-		// See https://g.co/AppIndexing/AndroidStudio for more information.
 		client.connect();
 		Action viewAction = Action.newAction(
 				Action.TYPE_VIEW, // TODO: choose an action type.
 				"Main Page", // TODO: Define a title for the content shown.
-				// TODO: If you have web page content that matches this app activity's content,
-				// make sure this auto-generated web page URL is correct.
-				// Otherwise, set the URL to null.
 				Uri.parse("http://host/path"),
-				// TODO: Make sure this auto-generated app URL is correct.
 				Uri.parse("android-app://org.yanzi.playcamera/http/host/path")
-				//Uri.parse("android-app://com.huashi.lua.a100u/http/host/path")
 		);
 		AppIndex.AppIndexApi.start(client, viewAction);
 	}
 	@Override
 	public void onStop() {
 		super.onStop();
-		Log.d("TT", "onStop");
-
-		// ATTENTION: This was auto-generated to implement the App Indexing API.
-		// See https://g.co/AppIndexing/AndroidStudio for more information.
 		Action viewAction = Action.newAction(
 				Action.TYPE_VIEW, // TODO: choose an action type.
 				"Main Page", // TODO: Define a title for the content shown.
-				// TODO: If you have web page content that matches this app activity's content,
-				// make sure this auto-generated web page URL is correct.
-				// Otherwise, set the URL to null.
 				Uri.parse("http://host/path"),
-				// TODO: Make sure this auto-generated app URL is correct.
 				Uri.parse("android-app://org.yanzi.playcamera/http/host/path")
-				//Uri.parse("android-app://com.huashi.lua.a100u/http/host/path")
 		);
 		AppIndex.AppIndexApi.end(client, viewAction);
 		client.disconnect();

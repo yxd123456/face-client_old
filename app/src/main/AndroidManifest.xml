@@ -61,11 +61,11 @@
         <activity android:name="org.yanzi.activity.ServiceActivity" />
         <activity android:name="org.yanzi.activity.DbActivity" />
 
-        <!--<receiver android:name="org.yanzi.activity.BootBroadcastReceiver">-->
-            <!--<intent-filter>-->
-                <!--<action android:name="android.intent.action.BOOT_COMPLETED" />-->
-            <!--</intent-filter>-->
-        <!--</receiver>-->
+        <receiver android:name="org.yanzi.activity.BootBroadcastReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
 
         <activity
             android:name="org.yanzi.activity.StartActivity"
