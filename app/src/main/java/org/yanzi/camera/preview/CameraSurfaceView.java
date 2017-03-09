@@ -167,13 +167,13 @@ public class CameraSurfaceView extends SurfaceView implements SurfaceHolder.Call
 					Log.d("Test", "num ' value is "+num);
 					num++;
 				}
-//			} else if(test[0] == 1 && ISSHOWINGMOVIE){
-//				Log.d("Test", "gai hui lai le********************************");
-//				CameraActivity.stopMovie();
-//				CameraActivity.sv_movie.setTranslationX(-1280f);
-//				CameraActivity.ll_panel.setVisibility(View.VISIBLE);
-//				setAlpha(1);
-//				ISSHOWINGMOVIE = false;
+			} else if(test[0] == 1 && ISSHOWINGMOVIE){
+				Log.d("Test", "gai hui lai le********************************");
+				CameraActivity.stopMovie();
+				CameraActivity.sv_movie.setTranslationX(-1280f);
+				CameraActivity.ll_panel.setVisibility(View.VISIBLE);
+				setAlpha(1);
+				ISSHOWINGMOVIE = false;
 			}
 		}
 

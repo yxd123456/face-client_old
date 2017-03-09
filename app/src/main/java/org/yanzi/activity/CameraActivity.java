@@ -678,18 +678,6 @@ public class CameraActivity extends FragmentActivity{
 			if(HSinterface != null){
 				if(HSinterface.Authenticate() == 1){
 					soundUtil.play(0);
-					if(mediaPlayer.isPlaying()){
-						runOnUiThread(new Runnable() {
-							@Override
-							public void run() {
-								CameraActivity.stopMovie();
-								CameraActivity.sv_movie.setTranslationX(-1280f);
-								CameraActivity.ll_panel.setVisibility(View.VISIBLE);
-								surfaceView.setAlpha(1);
-								CameraSurfaceView.ISSHOWINGMOVIE = false;
-							}
-						});
-					}
 					break;
 				}
 			}else{
