@@ -32,6 +32,7 @@ import android.util.Log;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 import android.view.View;
+import android.view.animation.AlphaAnimation;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
@@ -57,8 +58,9 @@ public class CameraSurfaceView extends SurfaceView implements SurfaceHolder.Call
 	Bitmap bm, bitmap;
 	Paint paint;
     private Rect area;
+	public static boolean ISSHOWINGMOVIE = false;
 
-    public CameraSurfaceView(Context context, AttributeSet attrs) {
+	public CameraSurfaceView(Context context, AttributeSet attrs) {
 		super(context, attrs);
 		// TODO Auto-generated constructor stub
 		mContext = context;
@@ -138,7 +140,7 @@ public class CameraSurfaceView extends SurfaceView implements SurfaceHolder.Call
 		return test;
 	}
 
-	int num;
+	int num = 0;
 
 	@TargetApi(Build.VERSION_CODES.LOLLIPOP)
 	@RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
@@ -150,15 +152,29 @@ public class CameraSurfaceView extends SurfaceView implements SurfaceHolder.Call
 //			if(CameraActivity.faceView != null){
 //				CameraActivity.faceView.setRects(CameraActivity.getRect(new Rect((test[1])*3/2, (test[2])*3/2, ((test[1]+test[3]))*3/2,((test[2]+test[4]))*3/2)));
 //			}
-//			if(test[0] == 0){
-//				if(num == 600){
-//					num = 0;
-//					camera.stopPreview();
-//					mContext.startActivity(new Intent(mContext, MeidaActivity.class));
-//				} else {
-//					num++;
-//				}
-//			}
+			Log.d("Test", test[0]+"------------------"+ISSHOWINGMOVIE);
+			if(test[0] == 0){
+				if(num >= 100 && !ISSHOWINGMOVIE){
+					Log.d("Test", "zhi xing le a");
+					num = 0;
+					setAlpha(0);
+					Log.d("TT", getWidth()+"");
+					CameraActivity.sv_movie.setTranslationX(0f);
+					ISSHOWINGMOVIE = true;
+					CameraActivity.ll_panel.setVisibility(View.INVISIBLE);
+					CameraActivity.showMovie();
+				} else {
+					Log.d("Test", "num ' value is "+num);
+					num++;
+				}
+//			} else if(test[0] == 1 && ISSHOWINGMOVIE){
+//				Log.d("Test", "gai hui lai le********************************");
+//				CameraActivity.stopMovie();
+//				CameraActivity.sv_movie.setTranslationX(-1280f);
+//				CameraActivity.ll_panel.setVisibility(View.VISIBLE);
+//				setAlpha(1);
+//				ISSHOWINGMOVIE = false;
+			}
 		}
 
 //		image = new YuvImage(data, 17, 800, 600, null);

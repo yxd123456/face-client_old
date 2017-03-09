@@ -45,13 +45,14 @@ public class CameraInterface {
 
 	public Camera doOpenCamera(CamOpenOverCallback callback, int cameraId){
 		Log.i(TAG, "Camera open....");
-		mCamera = Camera.open(0);
-		mCameraId = cameraId;
-		mCamera.setDisplayOrientation(0);
-		if(callback != null){
-			callback.cameraHasOpened();
+		if(mCamera == null){
+			mCamera = Camera.open(0);
+			mCameraId = cameraId;
+			mCamera.setDisplayOrientation(0);
+			if(callback != null){
+				callback.cameraHasOpened();
+			}
 		}
-
 		return  mCamera;
 	}
 

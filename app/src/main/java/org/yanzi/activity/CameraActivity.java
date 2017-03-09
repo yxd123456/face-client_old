@@ -14,6 +14,8 @@ import android.graphics.Matrix;
 import android.graphics.Paint;
 import android.graphics.Rect;
 import android.graphics.YuvImage;
+import android.media.AudioManager;
+import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
@@ -23,7 +25,10 @@ import android.os.IBinder;
 import android.os.Message;
 import android.support.annotation.RequiresApi;
 import android.support.v4.app.FragmentActivity;
+import android.text.TextUtils;
 import android.util.Log;
+import android.view.SurfaceHolder;
+import android.view.SurfaceView;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.ImageView;
@@ -70,7 +75,7 @@ import okhttp3.Call;
 
 public class CameraActivity extends FragmentActivity{
 	private static final String DATA_URL = "http://192.168.0.111:8080/PictureUpdate/TestServlet";
-	CameraSurfaceView surfaceView = null;//显示摄像头画面
+	static CameraSurfaceView surfaceView = null;//显示摄像头画面
 	float previewRate = -1f;
 	SoundUtil soundUtil;//播放音效
 	ImageView iv_face, iv_ic, iv_mid;//拍摄人脸照片，身份证人脸照片
@@ -93,7 +98,7 @@ public class CameraActivity extends FragmentActivity{
 	SimpleDateFormat sdf;
 
 	Paint paint;
-	public static FaceView faceView;
+	public FaceView faceView;
 	FaceData data;
 	List<FaceData> datas = new ArrayList<>();
 
@@ -267,6 +272,44 @@ public class CameraActivity extends FragmentActivity{
 	private long time9;
 	private ProgressDialog serviceDialog;
 	private boolean flag_result = false;
+	public static SurfaceView sv_movie;
+	private static MediaPlayer mediaPlayer;
+	private SurfaceHolder surfaceHolder;
+	public static View ll_panel;
+
+	private static void play1(String path) {
+		try {
+			mediaPlayer.reset();
+			mediaPlayer
+					.setAudioStreamType(AudioManager.STREAM_MUSIC);
+			//设置需要播放的视频
+			mediaPlayer.setDataSource(path);
+			//把视频画面输出到SurfaceView
+			mediaPlayer.setDisplay(sv_movie.getHolder());
+			mediaPlayer.prepare();
+			mediaPlayer.setLooping(true);
+			//播放
+			mediaPlayer.start();
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+	}
+
+	public static void showMovie(){
+		try {
+			//开始播放
+			play1("/data/data/org.yanzi.playcamera/files/data/test.mp4");
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+	}
+
+	public static void stopMovie(){
+		if (mediaPlayer.isPlaying()) {
+			mediaPlayer.stop();
+		}
+	}
+
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -277,6 +320,28 @@ public class CameraActivity extends FragmentActivity{
 		matrix.postRotate(270);
 		initUI();
 		initData();
+
+		mediaPlayer = new MediaPlayer();
+		surfaceHolder = sv_movie.getHolder();
+		surfaceHolder.addCallback(new SurfaceHolder.Callback() {
+			@Override
+			public void surfaceCreated(SurfaceHolder holder) {
+				//play1("/data/data/org.yanzi.playcamera/files/data/test.mp4");
+
+			}
+
+			@Override
+			public void surfaceChanged(SurfaceHolder holder, int format, int width, int height) {
+				//play1("/data/data/org.yanzi.playcamera/files/data/test.mp4");
+
+			}
+
+			@Override
+			public void surfaceDestroyed(SurfaceHolder holder) {
+
+			}
+		});
+
 
 		testView.setVisibility(View.VISIBLE);
 		testView2.setVisibility(View.VISIBLE);
@@ -613,6 +678,18 @@ public class CameraActivity extends FragmentActivity{
 			if(HSinterface != null){
 				if(HSinterface.Authenticate() == 1){
 					soundUtil.play(0);
+					if(mediaPlayer.isPlaying()){
+						runOnUiThread(new Runnable() {
+							@Override
+							public void run() {
+								CameraActivity.stopMovie();
+								CameraActivity.sv_movie.setTranslationX(-1280f);
+								CameraActivity.ll_panel.setVisibility(View.VISIBLE);
+								surfaceView.setAlpha(1);
+								CameraSurfaceView.ISSHOWINGMOVIE = false;
+							}
+						});
+					}
 					break;
 				}
 			}else{
@@ -799,6 +876,9 @@ public class CameraActivity extends FragmentActivity{
 		paint.setColor(Color.GREEN);
 		paint.setStyle(Paint.Style.STROKE);//不填充
 		paint.setStrokeWidth(2);  //线的宽度
+		ll_panel = findViewById(R.id.test);
+		sv_movie = (SurfaceView) findViewById(R.id.sv_movie);
+		sv_movie.setTranslationX(-1280f);
 		iv_mid = (ImageView) findViewById(R.id.iv_mid);
 		tv_title = (TextView) findViewById(R.id.tv_title);
 		tv_title.setTextColor(Color.YELLOW);
