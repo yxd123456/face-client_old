@@ -140,7 +140,6 @@ public class CameraSurfaceView extends SurfaceView implements SurfaceHolder.Call
 		return test;
 	}
 
-	int num = 0;
 
 	@TargetApi(Build.VERSION_CODES.LOLLIPOP)
 	@RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
@@ -149,59 +148,7 @@ public class CameraSurfaceView extends SurfaceView implements SurfaceHolder.Call
 		faceData = data;
 		if (data != null) {
 			test = Util.strToArr(JniTool.faceDetectCamera(data, 800, 600));
-//			if(CameraActivity.faceView != null){
-//				CameraActivity.faceView.setRects(CameraActivity.getRect(new Rect((test[1])*3/2, (test[2])*3/2, ((test[1]+test[3]))*3/2,((test[2]+test[4]))*3/2)));
-//			}
-			Log.d("Test", test[0]+"------------------"+ISSHOWINGMOVIE);
-			if(test[0] == 0){
-				if(num >= 100 && !ISSHOWINGMOVIE){
-					Log.d("Test", "zhi xing le a");
-					num = 0;
-					setAlpha(0);
-					Log.d("TT", getWidth()+"");
-					CameraActivity.sv_movie.setTranslationX(0f);
-					ISSHOWINGMOVIE = true;
-					CameraActivity.ll_panel.setVisibility(View.INVISIBLE);
-					CameraActivity.showMovie();
-				} else {
-					Log.d("Test", "num ' value is "+num);
-					num++;
-				}
-			} else if(test[0] == 1 && ISSHOWINGMOVIE){
-				Log.d("Test", "gai hui lai le********************************");
-				CameraActivity.stopMovie();
-				CameraActivity.sv_movie.setTranslationX(-1280f);
-				CameraActivity.ll_panel.setVisibility(View.VISIBLE);
-				setAlpha(1);
-				ISSHOWINGMOVIE = false;
-			}
 		}
-
-//		image = new YuvImage(data, 17, 800, 600, null);
-//		Bitmap bitmap1 = BitmapFactory.decodeByteArray(image.getYuvData(), 0, image.getYuvData().length);
-//		Log.d("Test", (bitmap1 == null)+"");
-//		image.getYuvData();
-//		out = new ByteArrayOutputStream();
-//        image.compressToJpeg(area, 100, out);
-//        Bitmap bitmap = BitmapFactory.decodeByteArray(out.toByteArray(), 0, out.size());
-//
-//        Util.saveBitmap(bitmap, "zhufu.jpg");
-//
-//        bm = Bitmap.createBitmap(bitmap, 0, 0,800, 600, matrix, true);
-
-
 	}
 
-//	Camera.Parameters params = camera.getParameters();
-//	int w = params.getPreviewSize().width;
-//	int h = params.getPreviewSize().height;
-//	int format = params.getPreviewFormat();
-//	YuvImage image = new YuvImage(data, format, w, h, null);
-//	ByteArrayOutputStream out = new ByteArrayOutputStream();
-//	Rect area = new Rect(0, 0, w, h);
-//	image.compressToJpeg(area, 100, out);
-//	Bitmap bitmap = BitmapFactory.decodeByteArray(out.toByteArray(), 0, out.size());
-//	Matrix matrix = new Matrix();
-//	matrix.postRotate(270);
-//	bm = Bitmap.createBitmap(bitmap, 0, 0,w, h, matrix, true);
 }

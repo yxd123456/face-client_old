@@ -31,7 +31,7 @@
     <application
         android:name="org.yanzi.activity.MyApplication"
         android:allowBackup="true"
-        android:icon="@drawable/ic_launcher_icon"
+        android:icon="@drawable/face1"
         android:label="@string/app_name">
         <activity
             android:name="org.yanzi.activity.CameraActivity"
@@ -61,12 +61,6 @@
         <activity android:name="org.yanzi.activity.ServiceActivity" />
         <activity android:name="org.yanzi.activity.DbActivity" />
 
-        <receiver android:name="org.yanzi.activity.BootBroadcastReceiver">
-            <intent-filter>
-                <action android:name="android.intent.action.BOOT_COMPLETED" />
-            </intent-filter>
-        </receiver>
-
         <activity
             android:name="org.yanzi.activity.StartActivity"
             android:screenOrientation="landscape"
@@ -76,6 +70,7 @@
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
                 <category android:name="android.intent.category.HOME"/>
+                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
         <activity android:name="org.yanzi.activity.DrawRectActivity" />
