@@ -421,7 +421,6 @@ public class CameraActivity extends FragmentActivity{
 			}
 			if(HSinterface != null){
 				if(HSinterface.Authenticate() == 1){
-					soundUtil.play(0);
 					break;
 				}
 			}else{
@@ -433,6 +432,7 @@ public class CameraActivity extends FragmentActivity{
 		ret1 = HSinterface.ReadCard();
 		if (ret1 == 1){//成功
 			try {
+				soundUtil.play(0);
 				ret1 = HSinterface.Unpack();// 照片解码
 				handler.sendEmptyMessage(0x124);
 				fis = new FileInputStream(filepath + "/zp.bmp");
@@ -544,19 +544,19 @@ public class CameraActivity extends FragmentActivity{
 				} catch (DbException e) {
 					e.printStackTrace();
 				}
-
-				bundle = new Bundle();
-				bundle.putString("name", faceData.getName());
-				bundle.putString("code", faceData.getCode());
-				bundle.putString("cameraFaceImg", "/data/data/org.yanzi.playcamera/camera_img/"+onceName);
-				bundle.putString("idCardFaceImg", "/data/data/org.yanzi.playcamera/camera_img/"+twoName);
-				bundle.putString("sex", faceData.getSex());
-				bundle.putString("people", faceData.getPeople());
-				bundle.putString("dateOfBirth", faceData.getDateOfBirth());
-				bundle.putString("addr", faceData.getAddr());
-				bundle.putString("department", faceData.getDepartment());
-				bundle.putString("startDate", faceData.getStartDate());
-				bundle.putString("endDate", faceData.getEndDate());
+//
+//				bundle = new Bundle();
+//				bundle.putString("name", faceData.getName());
+//				bundle.putString("code", faceData.getCode());
+//				bundle.putString("cameraFaceImg", "/data/data/org.yanzi.playcamera/camera_img/"+onceName);
+//				bundle.putString("idCardFaceImg", "/data/data/org.yanzi.playcamera/camera_img/"+twoName);
+//				bundle.putString("sex", faceData.getSex());
+//				bundle.putString("people", faceData.getPeople());
+//				bundle.putString("dateOfBirth", faceData.getDateOfBirth());
+//				bundle.putString("addr", faceData.getAddr());
+//				bundle.putString("department", faceData.getDepartment());
+//				bundle.putString("startDate", faceData.getStartDate());
+//				bundle.putString("endDate", faceData.getEndDate());
 
 
 			} catch (FileNotFoundException e) {
@@ -565,18 +565,18 @@ public class CameraActivity extends FragmentActivity{
 			{
 			}finally {
 				HsOtgService.ic = null;
-			    runOnUiThread(new Runnable() {
-					@Override
-					public void run() {
-						btn_enter.setVisibility(View.VISIBLE);
-						btn_enter.setOnClickListener(new View.OnClickListener() {
-							@Override
-							public void onClick(View v) {
-								KyVoicePrint.beginRecord(v.getContext(), bundle) ;
-							}
-						});
-					}
-				});
+//			    runOnUiThread(new Runnable() {
+//					@Override
+//					public void run() {
+//						btn_enter.setVisibility(View.VISIBLE);
+//						btn_enter.setOnClickListener(new View.OnClickListener() {
+//							@Override
+//							public void onClick(View v) {
+//								KyVoicePrint.beginRecord(v.getContext(), bundle) ;
+//							}
+//						});
+//					}
+//				});
 
 				try {
 					Thread.sleep(2000);
