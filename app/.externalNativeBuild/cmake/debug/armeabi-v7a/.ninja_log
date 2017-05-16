@@ -1,3 +1,15 @@
 # ninja log v5
-0	602	0	CMakeFiles/face-libs.dir/face-libs.cpp.o	2396c49f6573addc
-605	775	0	C:/Users/asus/Desktop/face-client_old/app/build/intermediates/cmake/debug/obj/armeabi-v7a/libface-libs.so	131fa9015788481b
+0	339	0	CMakeFiles/face-libs.dir/face-libs.cpp.o	2396c49f6573addc
+340	480	0	C:/Users/asus/Desktop/face-client_old/app/build/intermediates/cmake/debug/obj/armeabi-v7a/libface-libs.so	131fa9015788481b
+5	587	0	CMakeFiles/face-libs.dir/face-libs.cpp.o	2396c49f6573addc
+587	1087	0	C:/Users/asus/Desktop/face-client_old/app/build/intermediates/cmake/debug/obj/armeabi-v7a/libface-libs.so	131fa9015788481b
+3	425	0	CMakeFiles/face-libs.dir/face-libs.cpp.o	2396c49f6573addc
+426	598	0	C:/Users/asus/Desktop/face-client_old/app/build/intermediates/cmake/debug/obj/armeabi-v7a/libface-libs.so	131fa9015788481b
+2	490	0	CMakeFiles/face-libs.dir/face-libs.cpp.o	2396c49f6573addc
+490	657	0	C:/Users/asus/Desktop/face-client_old/app/build/intermediates/cmake/debug/obj/armeabi-v7a/libface-libs.so	131fa9015788481b
+4	481	0	CMakeFiles/face-libs.dir/face-libs.cpp.o	2396c49f6573addc
+481	720	0	C:/Users/asus/Desktop/face-client_old/app/build/intermediates/cmake/debug/obj/armeabi-v7a/libface-libs.so	131fa9015788481b
+3	273	0	CMakeFiles/face-libs.dir/face-libs.cpp.o	2396c49f6573addc
+274	387	0	C:/Users/asus/Desktop/face-client_old/app/build/intermediates/cmake/debug/obj/armeabi-v7a/libface-libs.so	131fa9015788481b
+2	234	0	CMakeFiles/face-libs.dir/face-libs.cpp.o	2396c49f6573addc
+234	348	0	C:/Users/asus/Desktop/face-client_old/app/build/intermediates/cmake/debug/obj/armeabi-v7a/libface-libs.so	131fa9015788481b

@@ -44,59 +44,62 @@ const char * intArrToStr(int num1, int num2){
     return strLast;
 }
 
-//extern "C"
-//JNIEXPORT jstring JNICALL
-//Java_org_yanzi_util_JniTool_faceFeatureExtractCamera1(JNIEnv *env, jclass type, jbyteArray bytes_) {
-//    jbyte *bytes = env->GetByteArrayElements(bytes_, NULL);
-//
-//    FACERC  facerc;
-//    float* f2[1];
-//    unsigned char* frame = (unsigned char *) bytes;
-//    int i = faceFeatureExtractCamera(frame,800,600,
-//                                     facerc,
-//                                     &f2[0],
-//                                     1);
-//
-//    char str1[5];
-//    int a = i;
-//    sprintf(str1,"%d",a);
-//    char str2[5];
-//    int b = facerc.x;
-//    sprintf(str2,"%d",b);
-//    char str3[5];
-//    int c = facerc.y;
-//    sprintf(str3,"%d",c);
-//    char str4[5];
-//    int d = facerc.width;
-//    sprintf(str4,"%d",d);
-//    char str5[5];
-//    int e = facerc.height;
-//    sprintf(str5,"%d",e);
-//
-//    char strLast1[25];
-//    char strLast2[25];
-//    char strLast3[25];
-//    char strLast4[25];
-//    char strLast5[25];
-//    strcpy(strLast1, str1);
-//    strcat(strLast1, "/");
-//    strcpy(strLast2, str2);
-//    strcat(strLast2, "/");
-//    strcpy(strLast3, str3);
-//    strcat(strLast3, "/");
-//    strcpy(strLast4, str4);
-//    strcat(strLast4, "/");
-//    strcpy(strLast5, str5);
-//
-//    strcat(strLast1, strLast2);
-//    strcat(strLast1, strLast3);
-//    strcat(strLast1, strLast4);
-//    strcat(strLast1, strLast5);
-//
-//    env->ReleaseByteArrayElements(bytes_, bytes, 0);
-//
-//    return env->NewStringUTF(strLast1);
-//}
+extern "C"
+JNIEXPORT jstring JNICALL
+Java_org_yanzi_util_JniTool_faceFeatureExtractCamera1(JNIEnv *env, jclass type, jbyteArray bytes_) {
+    jbyte *bytes = env->GetByteArrayElements(bytes_, NULL);
+
+    FACERC  facerc;
+    float* f2[1];
+    unsigned char* frame = (unsigned char *) bytes;
+    int i = faceFeatureExtractCamera(frame,800,600,
+                                     facerc,
+                                     &f2[0],
+                                     1, 0);
+
+    LOGI("这是数值对我来说很重要（逃生）：%i", i);
+
+
+    char str1[5];
+    int a = i;
+    sprintf(str1,"%d",a);
+    char str2[5];
+    int b = facerc.x;
+    sprintf(str2,"%d",b);
+    char str3[5];
+    int c = facerc.y;
+    sprintf(str3,"%d",c);
+    char str4[5];
+    int d = facerc.width;
+    sprintf(str4,"%d",d);
+    char str5[5];
+    int e = facerc.height;
+    sprintf(str5,"%d",e);
+
+    char strLast1[25];
+    char strLast2[25];
+    char strLast3[25];
+    char strLast4[25];
+    char strLast5[25];
+    strcpy(strLast1, str1);
+    strcat(strLast1, "/");
+    strcpy(strLast2, str2);
+    strcat(strLast2, "/");
+    strcpy(strLast3, str3);
+    strcat(strLast3, "/");
+    strcpy(strLast4, str4);
+    strcat(strLast4, "/");
+    strcpy(strLast5, str5);
+
+    strcat(strLast1, strLast2);
+    strcat(strLast1, strLast3);
+    strcat(strLast1, strLast4);
+    strcat(strLast1, strLast5);
+
+    env->ReleaseByteArrayElements(bytes_, bytes, 0);
+
+    return env->NewStringUTF(strLast1);
+}
 
 extern "C"
 JNIEXPORT jstring JNICALL
@@ -368,74 +371,74 @@ Java_org_yanzi_util_JniTool_faceFeatureExtractCamera(JNIEnv *env, jclass type, j
     return i;
 }
 
-extern "C"
-JNIEXPORT jstring JNICALL
-Java_org_yanzi_util_JniTool_faceFeatureExtractCamera1(JNIEnv *env, jclass type, jstring imgPath_) {
-    const char *imgPath = env->GetStringUTFChars(imgPath_, 0);
-
-    const char *imgPathA;
-    char buf1[100];
-    strcpy(buf1,"/data/data/org.yanzi.playcamera/camera_img/");
-    strcat(buf1,imgPath);
-    imgPathA = (const char*)buf1;
-
-    char* path1 = new char[100];//足够长
-    strcpy(path1,imgPathA);
-
-    FACERC  facerc;
-    float* f2[1];
-    int i = faceFeatureExtractCamera(path1,
-                                     facerc,
-                                     &f2[0],
-                                     1);
-    LOGI("照片一识别返回值i为：%i", i);
-    if(i != 0){
-        LOGI("x：%i", facerc.x);
-        LOGI("y：%i", facerc.y);
-        LOGI("width：%i", facerc.width);
-        LOGI("height：%i", facerc.height);
-    }
-
-    char str1[5];
-    int a = i;
-    sprintf(str1,"%d",a);
-    char str2[5];
-    int b = facerc.x;
-    sprintf(str2,"%d",b);
-    char str3[5];
-    int c = facerc.y;
-    sprintf(str3,"%d",c);
-    char str4[5];
-    int d = facerc.width;
-    sprintf(str4,"%d",d);
-    char str5[5];
-    int e = facerc.height;
-    sprintf(str5,"%d",e);
-
-    char strLast1[25];
-    char strLast2[25];
-    char strLast3[25];
-    char strLast4[25];
-    char strLast5[25];
-    strcpy(strLast1, str1);
-    strcat(strLast1, "/");
-    strcpy(strLast2, str2);
-    strcat(strLast2, "/");
-    strcpy(strLast3, str3);
-    strcat(strLast3, "/");
-    strcpy(strLast4, str4);
-    strcat(strLast4, "/");
-    strcpy(strLast5, str5);
-
-    strcat(strLast1, strLast2);
-    strcat(strLast1, strLast3);
-    strcat(strLast1, strLast4);
-    strcat(strLast1, strLast5);
-
-    env->ReleaseStringUTFChars(imgPath_, imgPath);
-
-    return env->NewStringUTF(strLast1);
-}
+//extern "C"
+//JNIEXPORT jstring JNICALL
+//Java_org_yanzi_util_JniTool_faceFeatureExtractCamera1(JNIEnv *env, jclass type, jstring imgPath_) {
+//    const char *imgPath = env->GetStringUTFChars(imgPath_, 0);
+//
+//    const char *imgPathA;
+//    char buf1[100];
+//    strcpy(buf1,"/data/data/org.yanzi.playcamera/camera_img/");
+//    strcat(buf1,imgPath);
+//    imgPathA = (const char*)buf1;
+//
+//    char* path1 = new char[100];//足够长
+//    strcpy(path1,imgPathA);
+//
+//    FACERC  facerc;
+//    float* f2[1];
+//    int i = faceFeatureExtractCamera(path1,
+//                                     facerc,
+//                                     &f2[0],
+//                                     1);
+//    LOGI("照片一识别返回值i为：%i", i);
+//    if(i != 0){
+//        LOGI("x：%i", facerc.x);
+//        LOGI("y：%i", facerc.y);
+//        LOGI("width：%i", facerc.width);
+//        LOGI("height：%i", facerc.height);
+//    }
+//
+//    char str1[5];
+//    int a = i;
+//    sprintf(str1,"%d",a);
+//    char str2[5];
+//    int b = facerc.x;
+//    sprintf(str2,"%d",b);
+//    char str3[5];
+//    int c = facerc.y;
+//    sprintf(str3,"%d",c);
+//    char str4[5];
+//    int d = facerc.width;
+//    sprintf(str4,"%d",d);
+//    char str5[5];
+//    int e = facerc.height;
+//    sprintf(str5,"%d",e);
+//
+//    char strLast1[25];
+//    char strLast2[25];
+//    char strLast3[25];
+//    char strLast4[25];
+//    char strLast5[25];
+//    strcpy(strLast1, str1);
+//    strcat(strLast1, "/");
+//    strcpy(strLast2, str2);
+//    strcat(strLast2, "/");
+//    strcpy(strLast3, str3);
+//    strcat(strLast3, "/");
+//    strcpy(strLast4, str4);
+//    strcat(strLast4, "/");
+//    strcpy(strLast5, str5);
+//
+//    strcat(strLast1, strLast2);
+//    strcat(strLast1, strLast3);
+//    strcat(strLast1, strLast4);
+//    strcat(strLast1, strLast5);
+//
+//    env->ReleaseStringUTFChars(imgPath_, imgPath);
+//
+//    return env->NewStringUTF(strLast1);
+//}
 
 extern "C"
 JNIEXPORT jint JNICALL
@@ -526,12 +529,13 @@ Java_org_yanzi_util_JniTool_test(JNIEnv *env, jclass type) {
 
 
 extern "C"
-JNIEXPORT void JNICALL
+JNIEXPORT jint JNICALL
 Java_org_yanzi_util_JniTool_init(JNIEnv *env, jclass type) {
 
     LOGI("正在初始化...");
-    faceVeriInit("/data/data/org.yanzi.playcamera/files/faceVeriConfig.yml");
+    int i = faceVeriInit("/data/data/org.yanzi.playcamera/files/faceVeriConfig.yml");
     LOGI("初始化完毕");
+    return i;
 
 }
 

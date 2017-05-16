@@ -9,7 +9,7 @@ arguments :
 -DCMAKE_BUILD_TYPE=Release
 -DCMAKE_MAKE_PROGRAM=C:\Users\asus\AppData\Local\Android\Sdk\cmake\3.6.3155560\bin\ninja.exe
 -DCMAKE_TOOLCHAIN_FILE=C:\Users\asus\AppData\Local\Android\Sdk\ndk-bundle\build\cmake\android.toolchain.cmake
--DANDROID_NATIVE_API_LEVEL=14
+-DANDROID_NATIVE_API_LEVEL=16
 -DANDROID_PLATFORM=android-13
 -DANDROID_TOOLCHAIN=clang
 -DANDROID_STL=gnustl_static

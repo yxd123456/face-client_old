@@ -147,7 +147,17 @@ public class CameraSurfaceView extends SurfaceView implements SurfaceHolder.Call
 	public void onPreviewFrame(byte[] data, Camera camera) {
 		faceData = data;
 		if (data != null) {
+			long t1 = System.currentTimeMillis();
 			test = Util.strToArr(JniTool.faceDetectCamera(data, 800, 600));
+			long t2 = System.currentTimeMillis();
+			Log.d("TT", (t2-t1)+"ms");
+			if(CameraActivity.faceView != null){
+				//JniTool.debug(data);
+
+				CameraActivity.faceView.setRects(new Rect((int)((test[1])*3/2.2), (test[2])*3/2, (test[1]+test[3])*3/2,(test[2]+test[4])*3/2    ));
+				//CameraActivity.faceView.setRects(new Rect((test[2])*3/2, (test[1])*3/2, ((test[2]+test[4]))*3/2,((test[1]+test[3]))*3/2));
+
+			}
 		}
 	}
 
