@@ -104,7 +104,7 @@ public class CameraActivity extends FragmentActivity{
 	View ll_progressBar,ll_info;//进度条布局，信息布局
 	SimpleDateFormat sdf;
 
-	TextView tv_info;
+	public static TextView tv_info;
 
 	Paint paint;
 	public static FaceView faceView;
@@ -345,7 +345,6 @@ public class CameraActivity extends FragmentActivity{
 		setContentView(R.layout.activity_camera);
 
 
-
 		area = new Rect(0, 0, 800, 600);
 		matrix = new Matrix();
 		matrix.postRotate(270);
@@ -377,102 +376,102 @@ public class CameraActivity extends FragmentActivity{
 		}
 
 
-		//todo 用来检测更新的线程
-		Thread updateThread = new Thread(new Runnable() {
-			@Override
-			public void run() {
-				while (true){
-					if(NetUtil.isNetworkConnected(CameraActivity.this)){
-						OkHttpUtils
-								.get()
-								.url("http://192.168.111.111:8080/PictureUpdate/VersionUpdataServlet")
-								.build()
-								.execute(new StringCallback() {
-									@Override
-									public void onError(Call call, Exception e, int id) {
-										Log.d("Update", "请求失败 "+e.getMessage());
-									}
-
-									@Override
-									public void onResponse(String response, int id) {
-										Log.d("Update", "成功"+response);
-										Gson gson = new Gson();
-										version = gson.fromJson(response, ApkVersion.class);
-										Log.d("TT", version.getAPKUrl()+"\n"
-												+version.getImportantLevel()+"\n"
-												+version.getVersionNumber());
-
-										new Thread(new Runnable() {
-											@Override
-											public void run() {
-												try {
-													if(!version.getVersionNumber().equals("1")){
-														URL url = new URL("http://"+version.getAPKUrl());
-														Log.d("Update", "the addr is "+"http://"+version.getAPKUrl());
-														HttpURLConnection conn = (HttpURLConnection) url.openConnection();
-														Log.d("Update", "1"+(conn == null));
-														assert conn != null;
-														conn.connect();
-														Log.d("Update", "2");
-
-														InputStream is = conn.getInputStream();
-														Log.d("Update", "3");
-
-														if(conn.getContentLength() > 0){
-															Log.d("Update", "start download!!!!!");
-															FileOutputStream fos = new FileOutputStream(Environment.getExternalStorageDirectory()+"/app_debug.apk");
-															byte[] bytes = new byte[1024];
-															int read = 0;
-															while ((read = is.read(bytes))!=-1){
-																fos.write(bytes, 0, read);
-															}
-															fos.flush();
-															fos.close();
-															Log.d("Update", "download apk success!!!");
-															Uri uri = Uri.fromFile(new File(Environment.getExternalStorageDirectory()+"/app_debug.apk"));
-															Intent localIntent = new Intent(Intent.ACTION_VIEW);
-															localIntent.setDataAndType(uri, "application/vnd.android.package-archive");
-															startActivity(localIntent);
-															Thread.sleep(20000);
-															Intent i = getBaseContext().getPackageManager()
-																	.getLaunchIntentForPackage(getBaseContext().getPackageName());
-															i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-															startActivity(i);
-														}
-
-													}
-												} catch (NullPointerException e) {
-													e.printStackTrace();
-													Log.d("Update", "1update is error "+e.getMessage());
-												} catch (FileNotFoundException e) {
-													e.printStackTrace();
-													Log.d("Update", "2update is error "+e.getMessage());
-
-												} catch (MalformedURLException e) {
-													e.printStackTrace();
-													Log.d("Update", "3update is error "+e.getMessage());
-
-												} catch (IOException e) {
-													e.printStackTrace();
-													Log.d("Update", "4update is error "+e.getMessage());
-
-												} catch (InterruptedException e) {
-													e.printStackTrace();
-												}
-											}
-										}).start();
-
-									}
-								});
-					}
-					try {
-						Thread.sleep(1000000);
-					} catch (InterruptedException e) {
-						e.printStackTrace();
-					}
-				}
-			}
-		});
+//		//todo 用来检测更新的线程
+//		Thread updateThread = new Thread(new Runnable() {
+//			@Override
+//			public void run() {
+//				while (true){
+//					if(NetUtil.isNetworkConnected(CameraActivity.this)){
+//						OkHttpUtils
+//								.get()
+//								.url("http://192.168.111.111:8080/PictureUpdate/VersionUpdataServlet")
+//								.build()
+//								.execute(new StringCallback() {
+//									@Override
+//									public void onError(Call call, Exception e, int id) {
+//										Log.d("Update", "请求失败 "+e.getMessage());
+//									}
+//
+//									@Override
+//									public void onResponse(String response, int id) {
+//										Log.d("Update", "成功"+response);
+//										Gson gson = new Gson();
+//										version = gson.fromJson(response, ApkVersion.class);
+//										Log.d("TT", version.getAPKUrl()+"\n"
+//												+version.getImportantLevel()+"\n"
+//												+version.getVersionNumber());
+//
+//										new Thread(new Runnable() {
+//											@Override
+//											public void run() {
+//												try {
+//													if(!version.getVersionNumber().equals("1")){
+//														URL url = new URL("http://"+version.getAPKUrl());
+//														Log.d("Update", "the addr is "+"http://"+version.getAPKUrl());
+//														HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+//														Log.d("Update", "1"+(conn == null));
+//														assert conn != null;
+//														conn.connect();
+//														Log.d("Update", "2");
+//
+//														InputStream is = conn.getInputStream();
+//														Log.d("Update", "3");
+//
+//														if(conn.getContentLength() > 0){
+//															Log.d("Update", "start download!!!!!");
+//															FileOutputStream fos = new FileOutputStream(Environment.getExternalStorageDirectory()+"/app_debug.apk");
+//															byte[] bytes = new byte[1024];
+//															int read = 0;
+//															while ((read = is.read(bytes))!=-1){
+//																fos.write(bytes, 0, read);
+//															}
+//															fos.flush();
+//															fos.close();
+//															Log.d("Update", "download apk success!!!");
+//															Uri uri = Uri.fromFile(new File(Environment.getExternalStorageDirectory()+"/app_debug.apk"));
+//															Intent localIntent = new Intent(Intent.ACTION_VIEW);
+//															localIntent.setDataAndType(uri, "application/vnd.android.package-archive");
+//															startActivity(localIntent);
+//															Thread.sleep(20000);
+//															Intent i = getBaseContext().getPackageManager()
+//																	.getLaunchIntentForPackage(getBaseContext().getPackageName());
+//															i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+//															startActivity(i);
+//														}
+//
+//													}
+//												} catch (NullPointerException e) {
+//													e.printStackTrace();
+//													Log.d("Update", "1update is error "+e.getMessage());
+//												} catch (FileNotFoundException e) {
+//													e.printStackTrace();
+//													Log.d("Update", "2update is error "+e.getMessage());
+//
+//												} catch (MalformedURLException e) {
+//													e.printStackTrace();
+//													Log.d("Update", "3update is error "+e.getMessage());
+//
+//												} catch (IOException e) {
+//													e.printStackTrace();
+//													Log.d("Update", "4update is error "+e.getMessage());
+//
+//												} catch (InterruptedException e) {
+//													e.printStackTrace();
+//												}
+//											}
+//										}).start();
+//
+//									}
+//								});
+//					}
+//					try {
+//						Thread.sleep(1000000);
+//					} catch (InterruptedException e) {
+//						e.printStackTrace();
+//					}
+//				}
+//			}
+//		});
 
 		//updateThread.start();
 
@@ -545,7 +544,6 @@ public class CameraActivity extends FragmentActivity{
 			}
 			if(HSinterface != null){
 				if(HSinterface.Authenticate() == 1){
-					handler.sendEmptyMessage(0x88889);
 					break;
 				}
 			}else{
@@ -554,8 +552,11 @@ public class CameraActivity extends FragmentActivity{
 				bindService(service, conn, Service.BIND_AUTO_CREATE);
 			}
 		}
+		handler.sendEmptyMessage(0x88889);
 		time_read1 = System.currentTimeMillis();
 		ret1 = HSinterface.ReadCard();
+		handler.sendEmptyMessage(0x999);
+
 		if (ret1 == 1){//成功
 			try {
 				ret1 = HSinterface.Unpack();// 照片解码
@@ -564,7 +565,6 @@ public class CameraActivity extends FragmentActivity{
 				idFaceBitmap = BitmapFactory.decodeStream(fis);
 				fis.close();
 				faceData = surfaceView.saveScreenshot();
-				Log.d("Hope", "s1");
 
 				try{
 					if(idFaceBitmap != null){

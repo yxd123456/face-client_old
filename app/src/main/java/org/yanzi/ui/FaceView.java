@@ -16,9 +16,6 @@ import android.graphics.drawable.Drawable;
 import android.hardware.Camera.CameraInfo;
 import android.hardware.Camera.Face;
 import android.util.AttributeSet;
-import android.util.Log;
-import android.view.LayoutInflater;
-import android.view.ViewGroup;
 import android.widget.ImageView;
 
 public class FaceView extends ImageView {
@@ -45,7 +42,7 @@ public class FaceView extends ImageView {
 		this.rect = rect;
 		invalidate();
 	}
-	
+
 
 	@Override
 	protected void onDraw(Canvas canvas) {
